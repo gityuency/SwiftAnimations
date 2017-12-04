@@ -16,11 +16,8 @@ class LineChartViewController: UIViewController {
     
     var ccccc: Int = 1
     
-    
-    
-    
     deinit {
-        print("定时器需要释放")
+        print("控制器 LineChartViewController 已经释放...")
     }
     
     override func viewDidLoad() {
@@ -56,6 +53,7 @@ class LineChartViewController: UIViewController {
             persentArray.append(p1)
         }
         
+        // 传入数组,就重新开始画图
         vv.scoreArray = persentArray
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 曲线分数图
 class CurveLineView: UIView, CAAnimationDelegate{
     
     /// 获得最小的长度
