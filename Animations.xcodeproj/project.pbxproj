@@ -15,6 +15,8 @@
 		1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B59C1FD4E8E50094B768 /* MainViewController.swift */; };
 		1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */; };
 		1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */; };
+		1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A41FD4ED7C0094B768 /* LineChartViewController.swift */; };
+		1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		1C76B59C1FD4E8E50094B768 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1C76B5A41FD4ED7C0094B768 /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C76B5A31FD4ED290094B768 /* LineChartViewController */,
 				1C76B59E1FD4E9430094B768 /* Tools */,
 			);
 			path = Animations;
@@ -79,6 +84,15 @@
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		1C76B5A31FD4ED290094B768 /* LineChartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C76B5A41FD4ED7C0094B768 /* LineChartViewController.swift */,
+				1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */,
+			);
+			path = LineChartViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
+				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
+				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,

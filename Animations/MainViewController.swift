@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
-        ["ViewControllerButtonList":"按钮组"],
+        ["LineChartViewController":"把你的成绩画成曲线"],
         ["ViewControllerLabelList":"标签组"],
         ["GSDPracticeTableViewController": "GSD 自动布局练习"],
         ]
@@ -36,8 +36,7 @@ class MainViewController: UIViewController {
     
     /// 设置页面
     private func setUpView() {
-        self.title = "自动布局示例代码"
-        
+        self.title = "我选择遗忘"
         
         tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.dataSource = self
@@ -46,8 +45,7 @@ class MainViewController: UIViewController {
         
         //注册 cell 重用的正确姿势
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellid)
-        
-        
+                
     }
 }
 
