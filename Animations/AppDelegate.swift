@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        setUpRootViewController()
+        
         return true
     }
 
@@ -42,5 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    //MARK: - 设置根视图控制器
+    private func setUpRootViewController() {
+        let navi = UINavigationController(rootViewController: MainViewController())
+        window = UIWindow()
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = navi
+        window?.makeKeyAndVisible()
+    }
+    
+    
 }
 
