@@ -17,8 +17,10 @@ class LineChartViewController: UIViewController {
     var ccccc: Int = 1
     
     
+    
+    
     deinit {
-        print("已经释放了")
+        print("定时器需要释放")
     }
     
     override func viewDidLoad() {
