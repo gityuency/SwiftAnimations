@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */; };
-		1C39F9481FD67AF500D00BC7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9421FD67AF500D00BC7 /* snow@2x.png */; };
 		1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9431FD67AF500D00BC7 /* snow_1.png */; };
 		1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9441FD67AF500D00BC7 /* snow_2.png */; };
 		1C39F94B1FD67AF500D00BC7 /* snow_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9451FD67AF500D00BC7 /* snow_3.png */; };
 		1C39F94C1FD67AF500D00BC7 /* snow_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9461FD67AF500D00BC7 /* snow_4.png */; };
 		1C39F94D1FD67AF500D00BC7 /* snow_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9471FD67AF500D00BC7 /* snow_5.png */; };
+		1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */; };
+		1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9521FD6858100D00BC7 /* snow@2x.png */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -30,12 +31,13 @@
 
 /* Begin PBXFileReference section */
 		1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowViewController.swift; sourceTree = "<group>"; };
-		1C39F9421FD67AF500D00BC7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
 		1C39F9431FD67AF500D00BC7 /* snow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_1.png; sourceTree = "<group>"; };
 		1C39F9441FD67AF500D00BC7 /* snow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_2.png; sourceTree = "<group>"; };
 		1C39F9451FD67AF500D00BC7 /* snow_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_3.png; sourceTree = "<group>"; };
 		1C39F9461FD67AF500D00BC7 /* snow_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_4.png; sourceTree = "<group>"; };
 		1C39F9471FD67AF500D00BC7 /* snow_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_5.png; sourceTree = "<group>"; };
+		1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffecViewController.swift; sourceTree = "<group>"; };
+		1C39F9521FD6858100D00BC7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,12 +77,28 @@
 		1C39F9411FD67AF500D00BC7 /* snow_image */ = {
 			isa = PBXGroup;
 			children = (
-				1C39F9421FD67AF500D00BC7 /* snow@2x.png */,
 				1C39F9431FD67AF500D00BC7 /* snow_1.png */,
 				1C39F9441FD67AF500D00BC7 /* snow_2.png */,
 				1C39F9451FD67AF500D00BC7 /* snow_3.png */,
 				1C39F9461FD67AF500D00BC7 /* snow_4.png */,
 				1C39F9471FD67AF500D00BC7 /* snow_5.png */,
+			);
+			path = snow_image;
+			sourceTree = "<group>";
+		};
+		1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C39F9511FD6858100D00BC7 /* snow_image */,
+				1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */,
+			);
+			path = ParticleEffecViewController;
+			sourceTree = "<group>";
+		};
+		1C39F9511FD6858100D00BC7 /* snow_image */ = {
+			isa = PBXGroup;
+			children = (
+				1C39F9521FD6858100D00BC7 /* snow@2x.png */,
 			);
 			path = snow_image;
 			sourceTree = "<group>";
@@ -111,6 +129,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */,
 				1C39F93E1FD67A2300D00BC7 /* SnowViewController */,
 				1C76B5A81FD523D20094B768 /* HexagonViewController */,
 				1C76B5A31FD4ED290094B768 /* LineChartViewController */,
@@ -206,12 +225,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C76B5951FD4E6CF0094B768 /* LaunchScreen.storyboard in Resources */,
+				1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */,
 				1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */,
 				1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */,
 				1C76B5921FD4E6CF0094B768 /* Assets.xcassets in Resources */,
 				1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */,
 				1C39F94B1FD67AF500D00BC7 /* snow_3.png in Resources */,
-				1C39F9481FD67AF500D00BC7 /* snow@2x.png in Resources */,
 				1C39F94D1FD67AF500D00BC7 /* snow_5.png in Resources */,
 				1C39F94C1FD67AF500D00BC7 /* snow_4.png in Resources */,
 			);
@@ -232,6 +251,7 @@
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,
+				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
 			);

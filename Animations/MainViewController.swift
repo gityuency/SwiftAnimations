@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     let listArray = [
         ["LineChartViewController":"把你的成绩画成曲线"],
         ["HexagonViewController":"能力分析六边形"],
+        ["ParticleEffecViewController": "粒子效果"],
         ["SnowViewController": "下雪了"],
         ]
     
