@@ -9,7 +9,7 @@
 import UIKit
 
 /// cell 重用标示
-let cellid = "MainViewController_CELL_ID"
+private let cellid = "MainViewController_CELL_ID"
 
 
 class MainViewController: UIViewController {
@@ -19,9 +19,10 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
-        ["LineChartViewController":"把你的成绩画成曲线"],
-        ["HexagonViewController":"能力分析六边形"],
-        ["HexagonViewController":"能力分析六边形"],
+        ["LineChartViewController": "我的月考成绩"],
+        ["HexagonViewController": "分析我的能力"],
+        ["ParticleEffecViewController": "粒子效果"],
+        ["SnowViewController": "下雪了"],
         ]
     
     

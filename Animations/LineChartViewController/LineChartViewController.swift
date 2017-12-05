@@ -62,4 +62,17 @@ class LineChartViewController: UIViewController {
         super.viewDidDisappear(animated)
         timer?.invalidate()
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        /// 更改导航栏文字的颜色和字体
+        title = "月考成绩"
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor:UIColor.red,
+             NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)
+        ]
+    }
+    
 }
