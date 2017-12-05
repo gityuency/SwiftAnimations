@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
         ["LineChartViewController":"把你的成绩画成曲线"],
         ["HexagonViewController":"能力分析六边形"],
         ["HexagonViewController":"能力分析六边形"],
-        ["HexagonViewController":"能力分析六边形"],
         ]
     
     
