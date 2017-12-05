@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
         ["LineChartViewController":"把你的成绩画成曲线"],
-        ["ViewControllerLabelList":"标签组"],
+        ["HexagonViewController":"能力分析六边形"],
         ["GSDPracticeTableViewController": "GSD 自动布局练习"],
         ]
     
@@ -63,7 +63,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellid, for: indexPath)
         
         //使用字典的值作为标题
-        cell.textLabel?.text = "\(indexPath.row): \(Array(listArray[indexPath.row].values)[0])"
+        cell.textLabel?.text = "\(indexPath.row + 1) \(Array(listArray[indexPath.row].values)[0])"
         return cell
     }
     
