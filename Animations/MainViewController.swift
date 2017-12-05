@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     let listArray = [
         ["LineChartViewController":"把你的成绩画成曲线"],
         ["HexagonViewController":"能力分析六边形"],
-        ["GSDPracticeTableViewController": "GSD 自动布局练习"],
         ]
     
     
