@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
     
     /// 设置页面
     private func setUpView() {
-        self.title = "我选择遗忘"
+        self.title = "Animations"
         
         tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.dataSource = self
