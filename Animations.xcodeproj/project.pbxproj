@@ -15,6 +15,11 @@
 		1C39F94D1FD67AF500D00BC7 /* snow_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9471FD67AF500D00BC7 /* snow_5.png */; };
 		1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */; };
 		1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9521FD6858100D00BC7 /* snow@2x.png */; };
+		1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */; };
+		1C39F9621FD7802600D00BC7 /* AAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F9611FD7802600D00BC7 /* AAViewController.swift */; };
+		1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9641FD78A0B00D00BC7 /* rocket.png */; };
+		1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9651FD78A0B00D00BC7 /* spark.png */; };
+		1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F9681FD794A100D00BC7 /* YXViewController.swift */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 		1C39F9471FD67AF500D00BC7 /* snow_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_5.png; sourceTree = "<group>"; };
 		1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffecViewController.swift; sourceTree = "<group>"; };
 		1C39F9521FD6858100D00BC7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
+		1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
+		1C39F9611FD7802600D00BC7 /* AAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAViewController.swift; sourceTree = "<group>"; };
+		1C39F9641FD78A0B00D00BC7 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
+		1C39F9651FD78A0B00D00BC7 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		1C39F9681FD794A100D00BC7 /* YXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXViewController.swift; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,25 @@
 			path = snow_image;
 			sourceTree = "<group>";
 		};
+		1C39F95E1FD6882600D00BC7 /* FireworksViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C39F9631FD78A0B00D00BC7 /* firework_images */,
+				1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */,
+				1C39F9611FD7802600D00BC7 /* AAViewController.swift */,
+			);
+			path = FireworksViewController;
+			sourceTree = "<group>";
+		};
+		1C39F9631FD78A0B00D00BC7 /* firework_images */ = {
+			isa = PBXGroup;
+			children = (
+				1C39F9641FD78A0B00D00BC7 /* rocket.png */,
+				1C39F9651FD78A0B00D00BC7 /* spark.png */,
+			);
+			path = firework_images;
+			sourceTree = "<group>";
+		};
 		1C76B57E1FD4E6CF0094B768 = {
 			isa = PBXGroup;
 			children = (
@@ -125,10 +154,12 @@
 				1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */,
 				1C76B59C1FD4E8E50094B768 /* MainViewController.swift */,
 				1C76B58C1FD4E6CF0094B768 /* ViewController.swift */,
+				1C39F9681FD794A100D00BC7 /* YXViewController.swift */,
 				1C76B58E1FD4E6CF0094B768 /* Main.storyboard */,
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
 				1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */,
 				1C39F93E1FD67A2300D00BC7 /* SnowViewController */,
 				1C76B5A81FD523D20094B768 /* HexagonViewController */,
@@ -224,7 +255,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */,
 				1C76B5951FD4E6CF0094B768 /* LaunchScreen.storyboard in Resources */,
+				1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */,
 				1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */,
 				1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */,
 				1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */,
@@ -246,6 +279,7 @@
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
+				1C39F9621FD7802600D00BC7 /* AAViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
@@ -254,6 +288,8 @@
 				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
+				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
+				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9X3RT5648E;
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9X3RT5648E;
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LineChartViewController: UIViewController {
+class LineChartViewController: YXViewController {
 
     private var timer: Timer?
     
@@ -67,8 +67,8 @@ class LineChartViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.title = "月考成绩"
         /// 更改导航栏文字的颜色和字体
-        title = "月考成绩"
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedStringKey.foregroundColor:UIColor.red,
              NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)

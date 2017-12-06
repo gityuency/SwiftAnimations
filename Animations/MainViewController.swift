@@ -23,6 +23,9 @@ class MainViewController: UIViewController {
         ["HexagonViewController":"能力分析六边形"],
         ["ParticleEffecViewController": "粒子效果"],
         ["SnowViewController": "下雪了"],
+        ["FireworksViewController": "一起去看花火吧"],
+
+        
         ]
     
     

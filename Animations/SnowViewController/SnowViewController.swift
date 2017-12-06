@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SnowViewController: UIViewController {
+class SnowViewController: YXViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class SnowViewController: UIViewController {
         // 创建粒子Layer
         let snowEmitter = CAEmitterLayer()
         // 粒子发射位置
-        snowEmitter.emitterPosition = CGPoint(x: 120, y: 0)
+        snowEmitter.emitterPosition = CGPoint(x: UIScreen.main.bounds.size.width / 2, y: 0)
         // 发射源的尺寸大小
         snowEmitter.emitterSize = view.bounds.size
         // 发射模式
@@ -97,9 +97,7 @@ class SnowViewController: UIViewController {
         leftBarBtn.setTitleTextAttributes(attr, for: .normal)
         navigationItem.leftBarButtonItem = leftBarBtn
         
-        /// 导航栏变透明
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
+     
     }
     
     

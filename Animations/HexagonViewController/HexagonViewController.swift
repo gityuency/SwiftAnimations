@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HexagonViewController: UIViewController {
+class HexagonViewController: YXViewController {
     
     
     
@@ -70,14 +70,7 @@ class HexagonViewController: UIViewController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        /// 导航栏变透明
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
-    
+  
     
     
     override func viewDidDisappear(_ animated: Bool) {
