@@ -83,24 +83,6 @@ class SnowViewController: YXViewController {
         return snowflake
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        /// 更改返回按钮的文字
-        let attr = [
-            NSAttributedStringKey.foregroundColor:UIColor.red,
-            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)
-        ]
-        
-        let leftBarBtn = UIBarButtonItem(title: "太冷了,我们回去吧!", style: .plain, target: self, action: #selector(backToPrevious))
-        leftBarBtn.setTitleTextAttributes(attr, for: .normal)
-        navigationItem.leftBarButtonItem = leftBarBtn
-        
-     
-    }
-    
-    
     //返回按钮点击响应
     @objc func backToPrevious(){
         self.navigationController!.popViewController(animated: true)

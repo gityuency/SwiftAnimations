@@ -27,6 +27,9 @@ class YXViewController: UIViewController {
         /// 导航栏变透明
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+
     }
 
 }
