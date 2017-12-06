@@ -19,8 +19,8 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
-        ["LineChartViewController":"把你的成绩画成曲线"],
-        ["HexagonViewController":"能力分析六边形"],
+        ["LineChartViewController":"我的月考成绩"],
+        ["HexagonViewController":"分析我的KDA"],
         ["ParticleEffecViewController": "粒子效果"],
         ["SnowViewController": "下雪了"],
         ["FireworksViewController": "一起去看花火吧"],
