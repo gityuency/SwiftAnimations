@@ -81,13 +81,16 @@ class FireworksViewController: YXViewController {
         spark.scale = 0.3
         spark.scaleRange = 0.1
         spark.scaleSpeed        = -0.2;
-        
         spark.alphaSpeed        = -0.8;
         
         spark.color = UIColor.white.cgColor
         spark.greenRange       = 5;      // different colors
         spark.redRange         = 5;
         spark.blueRange        = 5;
+
+        spark.greenSpeed        = -0.1;
+        spark.redSpeed          = 0.4;
+        spark.blueSpeed         = -0.1;
         
         spark.spin              = 2 * CGFloat.pi; //自旋转角度
         spark.spinRange         = 2 * CGFloat.pi; //自旋转角度范围
