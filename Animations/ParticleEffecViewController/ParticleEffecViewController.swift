@@ -10,7 +10,7 @@
 
 import UIKit
 
-class ParticleEffecViewController: UIViewController {
+class ParticleEffecViewController: YXViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class ParticleEffecViewController: UIViewController {
         // 周围发射角度
         snowflake.emissionRange = 0.5 * CGFloat.pi
         
-        // 子旋转角度范围
+        // 粒子旋转角度范围
         snowflake.spinRange = 0.25 * CGFloat.pi
         snowflake.contents = UIImage(named: "snow")?.cgImage
         
@@ -91,11 +91,5 @@ class ParticleEffecViewController: UIViewController {
     }
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        /// 导航栏变透明
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-    }
 }
 
