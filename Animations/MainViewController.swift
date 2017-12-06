@@ -68,6 +68,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         //使用字典的值作为标题
         cell.textLabel?.text = "\(indexPath.row + 1) \(Array(listArray[indexPath.row].values)[0])"
+        cell.textLabel?.textColor = UIColor(red:0.25, green:0.25, blue:0.25, alpha:1.00)
         return cell
     }
     

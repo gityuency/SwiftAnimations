@@ -73,7 +73,7 @@ class FireworksViewController: YXViewController {
         spark.birthRate         = 400;
         spark.velocity          = 125;
         spark.emissionRange     = 2 * CGFloat.pi;  // 360 度
-        spark.yAcceleration     = 75;              // 烟花粒子掉落的重力
+        spark.yAcceleration     = 60;              // 烟花粒子掉落的重力
         spark.lifetime          = 3;
         spark.lifetimeRange     = 0.5
         spark.contents          = UIImage(named: "spark")?.cgImage
