@@ -16,7 +16,6 @@
 		1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */; };
 		1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9521FD6858100D00BC7 /* snow@2x.png */; };
 		1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */; };
-		1C39F9621FD7802600D00BC7 /* AAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F9611FD7802600D00BC7 /* AAViewController.swift */; };
 		1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9641FD78A0B00D00BC7 /* rocket.png */; };
 		1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9651FD78A0B00D00BC7 /* spark.png */; };
 		1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F9681FD794A100D00BC7 /* YXViewController.swift */; };
@@ -44,7 +43,6 @@
 		1C39F94F1FD684C000D00BC7 /* ParticleEffecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleEffecViewController.swift; sourceTree = "<group>"; };
 		1C39F9521FD6858100D00BC7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
 		1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
-		1C39F9611FD7802600D00BC7 /* AAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAViewController.swift; sourceTree = "<group>"; };
 		1C39F9641FD78A0B00D00BC7 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		1C39F9651FD78A0B00D00BC7 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		1C39F9681FD794A100D00BC7 /* YXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			children = (
 				1C39F9631FD78A0B00D00BC7 /* firework_images */,
 				1C39F95F1FD6883500D00BC7 /* FireworksViewController.swift */,
-				1C39F9611FD7802600D00BC7 /* AAViewController.swift */,
 			);
 			path = FireworksViewController;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
-				1C39F9621FD7802600D00BC7 /* AAViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
