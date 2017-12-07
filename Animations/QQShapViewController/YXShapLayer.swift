@@ -10,7 +10,6 @@ import UIKit
 import QuartzCore
 
 class YXShapLayer: CALayer {
-
     
     /// layer 自身的宽度
     lazy var selfW: CGFloat = {
@@ -37,6 +36,12 @@ class YXShapLayer: CALayer {
     private var animDuration: CGFloat = 10
     /// 粒子出生位置，默认在左边顶上
     var beginPoint: CGPoint = CGPoint(x: 0, y: 0)
+    
+    //忽略黑色，白色当做透明处理，默认为NO，必须在设置image前面设置
+    var ignoredBlack: Bool = false
+    
+    //忽略白色，白色当做透明处理，默认为NO，必须在设置image前面设置
+    var ignoredWhite: Bool = false
     
     
     /// 把图片给我
@@ -69,7 +74,9 @@ class YXShapLayer: CALayer {
                     let A = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
                     
                     
-                    if A == 0 { continue }
+                    if A == 0 || (ignoredBlack && R + G + B == 3) || (ignoredBlack && R + G + B == 0) {
+                        continue  //忽略不需要的粒子
+                    }
                     
                     let P = CGPoint(x: gao, y: kuan)
                     
@@ -91,20 +98,16 @@ class YXShapLayer: CALayer {
     }
     
     
-    
-    
-    
     override init() {
         super.init()
-        
-        displayLink = CADisplayLink(target: self, selector: #selector(emitterAnim(displayLink:)))
-        displayLink?.add(to: RunLoop.current, forMode: .commonModes)
+    
+        createDisplayLink()
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     /// 定时器方法
     @objc func emitterAnim(displayLink: CADisplayLink) {
@@ -162,13 +165,29 @@ class YXShapLayer: CALayer {
         return -coverDistance * (time*(time-2)-1) + beginPosition
     }
     
-    private func reset() {
+    
+    
+    private func createDisplayLink() {
         
+        displayLink = CADisplayLink(target: self, selector: #selector(emitterAnim(displayLink:)))
+        displayLink?.add(to: RunLoop.current, forMode: .commonModes)
+    }
+    
+    
+    private func reset() {
         if displayLink != nil {
             displayLink?.invalidate()
             displayLink = nil
             animTime = 0
         }
     }
+    
+    
+    func showAnimation() {
+        reset()  //重置
+        createDisplayLink() //绘画
+    }
+    
+
     
 }
