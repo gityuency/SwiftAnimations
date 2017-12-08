@@ -110,11 +110,7 @@ class YXShapLayer: CALayer {
     
     override init() {
         super.init()
-        
         masksToBounds = false
-        
-        createDisplayLink()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -202,10 +198,8 @@ class YXShapLayer: CALayer {
     
     
     private func createDisplayLink() {
-        
         displayLink = CADisplayLink(target: self, selector: #selector(emitterAnim(displayLink:)))
         displayLink?.add(to: RunLoop.current, forMode: .commonModes)
-        
     }
     
     
