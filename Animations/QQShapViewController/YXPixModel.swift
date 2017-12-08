@@ -15,9 +15,12 @@ class YXPixModel {
     /// 每个像素的颜色
     var color: UIColor = UIColor.brown
     
-    /// 每个像素的位置
-    var point: CGPoint = CGPoint(x: 0, y: 0)
+    /// 像素的 X 坐标 (整型)
+    var pointX: Int = 0
     
+    /// 像素的 Y 坐标 (整型)
+    var pointY: Int = 0
+
     /// 每个像素延迟时间
     var delayTime: CGFloat = 0
     

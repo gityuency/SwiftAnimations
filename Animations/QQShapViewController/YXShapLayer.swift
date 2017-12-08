@@ -34,8 +34,11 @@ class YXShapLayer: CALayer {
     private var animTime: CGFloat = 0
     /// 动画持续时间
     private var animDuration: CGFloat = 10
+    
     /// 粒子出生位置，默认在左边顶上
     var beginPoint: CGPoint = CGPoint(x: 0, y: 0)
+    
+       
     
     //忽略黑色，白色当做透明处理，默认为NO，必须在设置image前面设置
     var ignoredBlack: Bool = false
@@ -54,6 +57,17 @@ class YXShapLayer: CALayer {
             }
             
             print(" 图片大小 \(W) * \(H)")
+            
+            
+            //把图片移动到 layer 中间需要的操作, 为了让每一个像素都固定在屏幕的像素点上, (防止因为 CGFloat 类型产生图片模糊) 做的宽高取整计算
+            var XWidth = (selfW - CGFloat(W)) / 2
+            XWidth = (XWidth / 2 == 0.0) ? XWidth : XWidth - 1
+            let XW = Int(XWidth)
+            
+            var YHeight = (selfH - CGFloat(H)) / 2
+            YHeight = (YHeight / 2 == 0.0) ? YHeight : YHeight - 1
+            let YH = Int(YHeight)
+            
             
             var array: Array<YXPixModel> = Array()  // 二维数组, 从第一行开始到最后一行,往下打印图片
             
@@ -78,14 +92,9 @@ class YXShapLayer: CALayer {
                         continue  //忽略不需要的粒子
                     }
                     
-                    let P = CGPoint(x: gao, y: kuan)
-                    
                     let model = YXPixModel()
-                    //把图像移到 layer 中间
-                    let X = (selfW - CGFloat(W)) / 2 + P.x
-                    let Y = (selfH - CGFloat(H)) / 2 + P.y
-                    
-                    model.point = CGPoint(x: X, y: Y)
+                    model.pointX = XW + gao
+                    model.pointY = YH + kuan
                     model.color = UIColor(red: R, green: G, blue: B, alpha: A);
                     array.append(model)
                 }
@@ -137,10 +146,12 @@ class YXShapLayer: CALayer {
             }
             
             
-            let curX = easeInOutQuad(time: curTime, beginPosition: beginPoint.x, endPosition: model.point.x, duration: easeDuration)
-            let curY = easeInOutQuad(time: curTime, beginPosition: beginPoint.y, endPosition: model.point.y, duration: easeDuration)
+            let curX = easeInOutQuad(time: curTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: easeDuration)
+            let curY = easeInOutQuad(time: curTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: easeDuration)
             
-            ctx.addEllipse(in: CGRect(x: curX, y: curY, width: 1, height: 1))
+            
+            ctx.addRect(CGRect(x: curX, y: curY, width: 1, height: 1))
+
             ctx.setFillColor(model.color.cgColor)
             ctx.fillPath()
             
@@ -165,6 +176,7 @@ class YXShapLayer: CALayer {
         return -coverDistance * (time*(time-2)-1) + beginPosition
     }
     
+
     
     
     private func createDisplayLink() {

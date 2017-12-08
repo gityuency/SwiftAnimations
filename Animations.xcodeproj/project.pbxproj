@@ -23,6 +23,7 @@
 		1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */; };
 		1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */; };
 		1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */; };
+		1C3D8C2A1FDA21F9000600D6 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3D8C291FDA21F9000600D6 /* 7.png */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXShapLayer.swift; sourceTree = "<group>"; };
 		1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQShapViewController.swift; sourceTree = "<group>"; };
 		1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPixModel.swift; sourceTree = "<group>"; };
+		1C3D8C291FDA21F9000600D6 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		1C0291F91FD7C22D0064EF9E /* QQShapViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1C3D8C291FDA21F9000600D6 /* 7.png */,
 				1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */,
 				1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */,
 				1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */,
@@ -283,6 +286,7 @@
 				1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */,
 				1C76B5951FD4E6CF0094B768 /* LaunchScreen.storyboard in Resources */,
 				1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */,
+				1C3D8C2A1FDA21F9000600D6 /* 7.png in Resources */,
 				1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */,
 				1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */,
 				1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */,

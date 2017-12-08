@@ -20,7 +20,6 @@ class QQShapViewController: YXViewController {
         qqShap.frame = view.bounds
         qqShap.position = view.center
         qqShap.beginPoint = CGPoint(x: view.center.x, y: 0)
-        
         qqShap.image = UIImage(named: "qq.png")
 
         view.layer.addSublayer(qqShap)
