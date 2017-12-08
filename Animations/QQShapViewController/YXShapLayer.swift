@@ -188,13 +188,11 @@ class YXShapLayer: CALayer {
         var time = time
         time /= duration / 2
         if (time < 1) {
-            return coverDistance * pow(time, 2) + beginPosition;
+            return coverDistance / 2 * pow(time, 2) + beginPosition;
         }
-        time -= time
-        return -coverDistance * (time*(time-2)-1) + beginPosition
+        time -= 1
+        return -coverDistance / 2 * (time*(time-2)-1) + beginPosition
     }
-    
-    
     
     
     private func createDisplayLink() {
