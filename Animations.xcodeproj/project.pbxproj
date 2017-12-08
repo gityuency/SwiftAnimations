@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0292071FD7EFF10064EF9E /* BBViewController.swift */; };
 		1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */; };
 		1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9431FD67AF500D00BC7 /* snow_1.png */; };
 		1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9441FD67AF500D00BC7 /* snow_2.png */; };
@@ -19,6 +20,9 @@
 		1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9641FD78A0B00D00BC7 /* rocket.png */; };
 		1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9651FD78A0B00D00BC7 /* spark.png */; };
 		1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F9681FD794A100D00BC7 /* YXViewController.swift */; };
+		1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */; };
+		1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */; };
+		1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -34,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C0292071FD7EFF10064EF9E /* BBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBViewController.swift; sourceTree = "<group>"; };
 		1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowViewController.swift; sourceTree = "<group>"; };
 		1C39F9431FD67AF500D00BC7 /* snow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_1.png; sourceTree = "<group>"; };
 		1C39F9441FD67AF500D00BC7 /* snow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_2.png; sourceTree = "<group>"; };
@@ -46,6 +51,9 @@
 		1C39F9641FD78A0B00D00BC7 /* rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rocket.png; sourceTree = "<group>"; };
 		1C39F9651FD78A0B00D00BC7 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		1C39F9681FD794A100D00BC7 /* YXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXViewController.swift; sourceTree = "<group>"; };
+		1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXShapLayer.swift; sourceTree = "<group>"; };
+		1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQShapViewController.swift; sourceTree = "<group>"; };
+		1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPixModel.swift; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0291F91FD7C22D0064EF9E /* QQShapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */,
+				1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */,
+				1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */,
+			);
+			path = QQShapViewController;
+			sourceTree = "<group>";
+		};
+		1C0292061FD7EFDF0064EF9E /* BBViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C0292071FD7EFF10064EF9E /* BBViewController.swift */,
+			);
+			path = BBViewController;
+			sourceTree = "<group>";
+		};
 		1C39F93E1FD67A2300D00BC7 /* SnowViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +182,8 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C0292061FD7EFDF0064EF9E /* BBViewController */,
+				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
 				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
 				1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */,
 				1C39F93E1FD67A2300D00BC7 /* SnowViewController */,
@@ -275,8 +303,12 @@
 			files = (
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
+				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
+				1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */,
+				1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */,
+				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,

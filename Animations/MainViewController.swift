@@ -19,13 +19,13 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
-        ["LineChartViewController": "我的月考成绩"],
-        ["HexagonViewController": "分析我的能力"],
+        ["LineChartViewController":"我的月考成绩"],
+        ["HexagonViewController":"分析我的KDA"],
         ["ParticleEffecViewController": "粒子效果"],
         ["SnowViewController": "下雪了"],
         ["FireworksViewController": "一起去看花火吧"],
-
-        
+        ["QQShapViewController": "指缝散落的沙,画出了你的样子."],
+        ["BBViewController": "画图"],
         ]
     
     
@@ -68,6 +68,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         //使用字典的值作为标题
         cell.textLabel?.text = "\(indexPath.row + 1) \(Array(listArray[indexPath.row].values)[0])"
+        cell.textLabel?.textColor = UIColor(red:0.25, green:0.25, blue:0.25, alpha:1.00)
         return cell
     }
     
