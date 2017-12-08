@@ -27,6 +27,10 @@ class YXPixModel {
     /// 每个像素持续时间
     var delayDuration: CGFloat = 0
     
+    /// 标记这个像素点是否已经到达目的地
+    var isEnd = false
+    
+    
     init() {
         delayTime = CGFloat(arc4random_uniform(30))
         delayDuration = CGFloat(arc4random_uniform(10))

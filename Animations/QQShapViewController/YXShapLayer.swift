@@ -38,7 +38,7 @@ class YXShapLayer: CALayer {
     /// 粒子出生位置，默认在左边顶上
     var beginPoint: CGPoint = CGPoint(x: 0, y: 0)
     
-       
+    
     
     //忽略黑色，白色当做透明处理，默认为NO，必须在设置image前面设置
     var ignoredBlack: Bool = false
@@ -103,15 +103,16 @@ class YXShapLayer: CALayer {
             pixArray = array
             
             array.removeAll()
+
         }
     }
     
     
     override init() {
         super.init()
-    
+        
         createDisplayLink()
-    
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -122,8 +123,10 @@ class YXShapLayer: CALayer {
     @objc func emitterAnim(displayLink: CADisplayLink) {
         setNeedsDisplay() //激活画图
         
-        animTime += 0.2
+        animTime += 0.2 //放下多少的粒子?
     }
+    
+    
     
     
     override func draw(in ctx: CGContext) {
@@ -136,22 +139,27 @@ class YXShapLayer: CALayer {
                 continue
             }
             
+            if model.isEnd { //对于已经到达目的地的粒子, 就不需要计算了
+                ctx.addRect(CGRect(x: CGFloat(model.pointX), y: CGFloat(model.pointY), width: 1, height: 1))
+                ctx.setFillColor(model.color.cgColor)
+                ctx.fillPath()
+                continue;
+            }
+            
             var curTime = animTime - model.delayTime //..
             
             let easeDuration = animDuration + model.delayDuration //缓动动画持续的时间??
             
+            
             if (curTime >= easeDuration) { //到达了目的地的粒子原地等待下没到达的粒子
                 curTime =  easeDuration;
                 count += 1;
+                model.isEnd = true
             }
-            
             
             let curX = easeInOutQuad(time: curTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: easeDuration)
             let curY = easeInOutQuad(time: curTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: easeDuration)
-            
-            
             ctx.addRect(CGRect(x: curX, y: curY, width: 1, height: 1))
-
             ctx.setFillColor(model.color.cgColor)
             ctx.fillPath()
             
@@ -160,7 +168,7 @@ class YXShapLayer: CALayer {
         if (count == pixArray.count) {
             reset()
         }
-        
+                
     }
     
     
@@ -176,13 +184,14 @@ class YXShapLayer: CALayer {
         return -coverDistance * (time*(time-2)-1) + beginPosition
     }
     
-
+    
     
     
     private func createDisplayLink() {
         
         displayLink = CADisplayLink(target: self, selector: #selector(emitterAnim(displayLink:)))
         displayLink?.add(to: RunLoop.current, forMode: .commonModes)
+        
     }
     
     
@@ -200,6 +209,6 @@ class YXShapLayer: CALayer {
         createDisplayLink() //绘画
     }
     
-
+    
     
 }
