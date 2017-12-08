@@ -9,6 +9,13 @@
 import UIKit
 import QuartzCore
 
+/*
+ http://www.cnblogs.com/chengguanhui/p/4664144.html 缓动函数
+ https://github.com/Xieyupeng520/AZEmitter //原作者 GitHub
+ http://www.jianshu.com/p/2d6014b226d6     //原作者 简书教程
+ */
+
+/// 粒子
 class YXShapLayer: CALayer {
     
     /// layer 自身的宽度
