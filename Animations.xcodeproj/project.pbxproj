@@ -155,6 +155,20 @@
 			path = firework_images;
 			sourceTree = "<group>";
 		};
+		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C0292061FD7EFDF0064EF9E /* BBViewController */,
+				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
+				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
+				1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */,
+				1C39F93E1FD67A2300D00BC7 /* SnowViewController */,
+				1C76B5A81FD523D20094B768 /* HexagonViewController */,
+				1C76B5A31FD4ED290094B768 /* LineChartViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		1C76B57E1FD4E6CF0094B768 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +188,7 @@
 		1C76B5891FD4E6CF0094B768 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				1C3D8C311FDA6E17000600D6 /* ViewControllers */,
 				1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */,
 				1C76B59C1FD4E8E50094B768 /* MainViewController.swift */,
 				1C76B58C1FD4E6CF0094B768 /* ViewController.swift */,
@@ -182,13 +197,6 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
-				1C0292061FD7EFDF0064EF9E /* BBViewController */,
-				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
-				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
-				1C39F94E1FD684AF00D00BC7 /* ParticleEffecViewController */,
-				1C39F93E1FD67A2300D00BC7 /* SnowViewController */,
-				1C76B5A81FD523D20094B768 /* HexagonViewController */,
-				1C76B5A31FD4ED290094B768 /* LineChartViewController */,
 				1C76B59E1FD4E9430094B768 /* Tools */,
 			);
 			path = Animations;
