@@ -144,9 +144,8 @@ class YXShapLayer: CALayer {
             }
             
             if model.isEnd { //对于已经到达目的地的粒子, 就不需要计算了
-                ctx.addRect(CGRect(x: CGFloat(model.pointX), y: CGFloat(model.pointY), width: 1, height: 1))
                 ctx.setFillColor(model.color.cgColor)
-                ctx.fillPath()
+                ctx.fill(CGRect(x: CGFloat(model.pointX), y: CGFloat(model.pointY), width: 1, height: 1))
                 continue;
             }
             
@@ -163,9 +162,9 @@ class YXShapLayer: CALayer {
             
             let curX = easeInOutQuad(time: curTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: easeDuration)
             let curY = easeInOutQuad(time: curTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: easeDuration)
-            ctx.addRect(CGRect(x: curX, y: curY, width: 1, height: 1))
+           
             ctx.setFillColor(model.color.cgColor)
-            ctx.fillPath()
+            ctx.fill(CGRect(x: curX, y: curY, width: 1, height: 1))
             
         }
         
