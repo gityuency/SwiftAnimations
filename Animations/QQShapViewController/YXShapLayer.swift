@@ -52,7 +52,7 @@ class YXShapLayer: CALayer {
         
         didSet{
             guard let image = image, let W = image.cgImage?.width, let H = image.cgImage?.height else {
-                assertionFailure("没有要画的图片")
+                assertionFailure("图片不对")
                 return
             }
             
@@ -103,13 +103,15 @@ class YXShapLayer: CALayer {
             pixArray = array
             
             array.removeAll()
-
+            
         }
     }
     
     
     override init() {
         super.init()
+        
+        masksToBounds = false
         
         createDisplayLink()
         
@@ -127,11 +129,17 @@ class YXShapLayer: CALayer {
     }
     
     
+    /// 粒子计数
+    private var count: Int = 0
+    
+    var runTimes: Int = 0
     
     
     override func draw(in ctx: CGContext) {
         
-        var count: Int = 0
+        
+        //这段函数的执行时间不能大于 16.7毫秒, 否则会丢帧
+        let startTime = CFAbsoluteTimeGetCurrent();
         
         for model in pixArray {
             
@@ -168,7 +176,13 @@ class YXShapLayer: CALayer {
         if (count == pixArray.count) {
             reset()
         }
-                
+        
+        runTimes += 1
+        print("执行次数: \(runTimes)")
+        
+        let linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+        print("一次执行时间: \(linkTime * 1000.0) 毫秒")
+        
     }
     
     
