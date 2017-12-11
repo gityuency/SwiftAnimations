@@ -8,7 +8,7 @@
 
 
 /*
- 欢迎访问原作者 GitHub 
+ 欢迎访问原作者 GitHub
  https://github.com/zipme/RQShineLabel
  */
 
