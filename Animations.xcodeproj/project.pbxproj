@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0292071FD7EFF10064EF9E /* BBViewController.swift */; };
+		1C2776C31FDE85880007679F /* TextShineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2776C21FDE85880007679F /* TextShineViewController.swift */; };
+		1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2776C41FDE85990007679F /* YXShineLabel.swift */; };
 		1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */; };
 		1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9431FD67AF500D00BC7 /* snow_1.png */; };
 		1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C39F9441FD67AF500D00BC7 /* snow_2.png */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		1C0292071FD7EFF10064EF9E /* BBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBViewController.swift; sourceTree = "<group>"; };
+		1C2776C21FDE85880007679F /* TextShineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextShineViewController.swift; sourceTree = "<group>"; };
+		1C2776C41FDE85990007679F /* YXShineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXShineLabel.swift; sourceTree = "<group>"; };
 		1C39F93F1FD67A3300D00BC7 /* SnowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowViewController.swift; sourceTree = "<group>"; };
 		1C39F9431FD67AF500D00BC7 /* snow_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_1.png; sourceTree = "<group>"; };
 		1C39F9441FD67AF500D00BC7 /* snow_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_2.png; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 				1C0292071FD7EFF10064EF9E /* BBViewController.swift */,
 			);
 			path = BBViewController;
+			sourceTree = "<group>";
+		};
+		1C2776C11FDE856C0007679F /* TextShineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C2776C21FDE85880007679F /* TextShineViewController.swift */,
+				1C2776C41FDE85990007679F /* YXShineLabel.swift */,
+			);
+			path = TextShineViewController;
 			sourceTree = "<group>";
 		};
 		1C39F93E1FD67A2300D00BC7 /* SnowViewController */ = {
@@ -158,6 +171,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C2776C11FDE856C0007679F /* TextShineViewController */,
 				1C0292061FD7EFDF0064EF9E /* BBViewController */,
 				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
 				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
@@ -310,10 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
+				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
+				1C2776C31FDE85880007679F /* TextShineViewController.swift in Sources */,
 				1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */,
 				1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */,
 				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
