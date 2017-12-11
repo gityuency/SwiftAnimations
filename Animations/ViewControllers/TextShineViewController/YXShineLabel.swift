@@ -6,8 +6,15 @@
 //  Copyright © 2017 sunny. All rights reserved.
 //
 
+
+/*
+ 欢迎访问原作者 GitHub 
+ https://github.com/zipme/RQShineLabel
+ */
+
 import UIKit
 
+/// 文字淡入淡出
 class YXShineLabel: UILabel {
     
     //MARK: - 外部使用的属性和方法
