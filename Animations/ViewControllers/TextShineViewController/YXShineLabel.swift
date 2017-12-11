@@ -1,7 +1,7 @@
 //
 //  YXShineLabel.swift
 //  Label
-//
+//  潮水
 //  Created by yuency on 08/12/2017.
 //  Copyright © 2017 sunny. All rights reserved.
 //
