@@ -37,6 +37,9 @@
 		1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */; };
 		1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A91FD523DF0094B768 /* HexagonViewController.swift */; };
 		1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */; };
+		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
+		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
+		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveLineView.swift; sourceTree = "<group>"; };
 		1C76B5A91FD523DF0094B768 /* HexagonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonViewController.swift; sourceTree = "<group>"; };
 		1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiuBianXingView.swift; sourceTree = "<group>"; };
+		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
+		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1CE31F611FDFD078004B8177 /* ButtonsViewController */,
 				1C2776C11FDE856C0007679F /* TextShineViewController */,
 				1C0292061FD7EFDF0064EF9E /* BBViewController */,
 				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
@@ -221,6 +228,7 @@
 			children = (
 				1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */,
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
+				1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -241,6 +249,15 @@
 				1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */,
 			);
 			path = HexagonViewController;
+			sourceTree = "<group>";
+		};
+		1CE31F611FDFD078004B8177 /* ButtonsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */,
+				1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */,
+			);
+			path = ButtonsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
+				1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */,
 				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
+				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
@@ -335,6 +354,7 @@
 				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
+				1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,
 				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
