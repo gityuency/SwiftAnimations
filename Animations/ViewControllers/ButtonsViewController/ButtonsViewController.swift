@@ -13,8 +13,6 @@ class ButtonsViewController: YXViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red:0.15, green:0.64, blue:0.39, alpha:1.00)
-        
         
         let loginButton:WaterRippleButton = WaterRippleButton(frame: CGRect(x: 20, y: 80, width: view.bounds.size.width - 40, height: 60))
         loginButton.setTitle("不经意的思念是那么痛", for: UIControlState())

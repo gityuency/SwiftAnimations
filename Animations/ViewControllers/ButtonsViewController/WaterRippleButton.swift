@@ -83,8 +83,8 @@ class WaterRippleButton: UIButton {
     /// 初始化设置
     private func commonInit() {
         
-        backgroundColor = UIColor.yellow
-        rippleColor = UIColor.red
+        backgroundColor = UIColor.orange
+        rippleColor = UIColor.yellow
         
         displaylink = CADisplayLink(target: self, selector: #selector(WaterRippleButton.updateWaterRipple))
         displaylink?.isPaused = true
