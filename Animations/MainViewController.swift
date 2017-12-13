@@ -19,6 +19,8 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
+        ["ButtonsViewController":"按钮效果集合"],
+        ["TextShineViewController": "山围故国周遭在,潮打空城寂寞回."],
         ["LineChartViewController":"我的月考成绩"],
         ["HexagonViewController":"分析我的KDA"],
         ["ParticleEffecViewController": "粒子效果"],
@@ -27,7 +29,6 @@ class MainViewController: UIViewController {
         ["FireworksViewController": "一起去看花火吧"],
         ["QQShapViewController": "指缝散落的沙,画出了你的样子."],
         ["BBViewController": "画图"],
-        
         ]
     
     
@@ -42,7 +43,7 @@ class MainViewController: UIViewController {
     
     /// 设置页面
     private func setUpView() {
-        self.title = "Animations"
+        self.title = "啊你妹"
         
         tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.dataSource = self

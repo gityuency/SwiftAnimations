@@ -10,7 +10,6 @@ import UIKit
 
 class LineChartViewController: YXViewController {
 
-    private var timer: Timer?
     
     let vv = CurveLineView()
     
@@ -30,37 +29,41 @@ class LineChartViewController: YXViewController {
         
         vv.center = view.center
         
-        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(LineChartViewController.timerEvent), userInfo: nil, repeats: true)
     
-    }
-
-    
-    
-    @objc func timerEvent() {
         
-        var a =  arc4random_uniform(10)
         
-        if a == 0 {
-            a += 1
-        }
-        
-        var persentArray: Array<CGFloat>  = Array()
-        
-        for _ in 0..<a {
+        let timeCount = 0
+        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+        codeTimer.schedule(deadline: .now(), repeating: .seconds(4))
+        codeTimer.setEventHandler(handler: {
             
-            let p1: CGFloat = CGFloat(arc4random_uniform(100)) * 0.01
+            DispatchQueue.main.async {
+                
+                
+                var a =  arc4random_uniform(10)
+                
+                if a == 0 {
+                    a += 1
+                }
+                
+                var persentArray: Array<CGFloat>  = Array()
+                
+                for _ in 0..<a {
+                    
+                    let p1: CGFloat = CGFloat(arc4random_uniform(100)) * 0.01
+                    
+                    persentArray.append(p1)
+                }
+                
+                // 传入数组,就重新开始画图
+                self.vv.scoreArray = persentArray
+                
+            }
             
-            persentArray.append(p1)
-        }
+            if timeCount != 0 {codeTimer.cancel()}
+        })
+        codeTimer.resume()
         
-        // 传入数组,就重新开始画图
-        vv.scoreArray = persentArray
-    }
-    
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        timer?.invalidate()
     }
     
     
