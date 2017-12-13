@@ -34,6 +34,9 @@ class WaterRippleButton: UIButton {
     /// 颜色变化数组
     private var colorArray: Array<UIColor> = Array()
     
+    /// 获得圆形的最大半径
+    private var R: CGFloat = 0
+    
     /// 波浪的颜色
     var rippleColor: UIColor? {
         didSet{
@@ -95,19 +98,6 @@ class WaterRippleButton: UIButton {
     /// 定时器方法 更新动画
     @objc private func updateWaterRipple() {
         
-        /// 如果圆形覆盖了整个按钮, 我们就停止定时器
-        let x1 = frame.size.width - circleCenterX
-        let x2 = frame.size.width - x1
-        let maxXLength = x1 > x2 ? x1 : x2
-        
-        let y1 = frame.size.height - circleCenterY
-        let y2 = frame.size.height - y1
-        let maxYLength = y1 > y2 ? y1 : y2
-        
-        let W = pow(maxXLength, 2)
-        let Y = pow(maxYLength, 2)
-        let R = sqrt(W + Y)
-        
         if rippleRadius > R {
 
             rippNow = false  //进入褪色阶段
@@ -138,6 +128,20 @@ class WaterRippleButton: UIButton {
         self.circleCenterX = point1.x
         
         self.circleCenterY = point1.y
+        
+        
+        /// 如果圆形覆盖了整个按钮, 我们就停止定时器
+        let x1 = frame.size.width - circleCenterX
+        let x2 = frame.size.width - x1
+        let maxXLength = x1 > x2 ? x1 : x2
+        
+        let y1 = frame.size.height - circleCenterY
+        let y2 = frame.size.height - y1
+        let maxYLength = y1 > y2 ? y1 : y2
+        
+        let W = pow(maxXLength, 2)
+        let Y = pow(maxYLength, 2)
+        R = sqrt(W + Y)
         
         displaylink?.isPaused = false //开始刷新
     }
