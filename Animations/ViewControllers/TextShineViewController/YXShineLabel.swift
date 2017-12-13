@@ -125,7 +125,7 @@ class YXShineLabel: UILabel {
     }
     
     /// 定时器方法
-    @objc func updateAttributedString() {
+    @objc private func updateAttributedString() {
         
         let now = CACurrentMediaTime()
         
