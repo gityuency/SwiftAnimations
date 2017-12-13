@@ -6,6 +6,11 @@
 //  Copyright © 2017 sunny. All rights reserved.
 //
 
+/*
+ 个人觉得这个按钮的设计方案不是很好, 使用定时器调用 drawRect 方法是比较消耗 CPU 资源的, 可以用 layer 来代替 能达到同样的效果
+ 这次就当是练手了, 我也不想再把这份代码重构了, 好歹花了我很多时间.
+ */
+
 import UIKit
 
 /// 水波纹按钮
