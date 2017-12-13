@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
         ["LineChartViewController":"我的月考成绩"],
         ["HexagonViewController":"分析我的KDA"],
         ["ParticleEffecViewController": "粒子效果"],
+        ["NeonViewController": "散射粒子"],
         ["SnowViewController": "下雪了"],
         ["FireworksViewController": "一起去看花火吧"],
         ["QQShapViewController": "指缝散落的沙,画出了你的样子."],

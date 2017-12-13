@@ -35,6 +35,8 @@
 		1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */; };
 		1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5A91FD523DF0094B768 /* HexagonViewController.swift */; };
 		1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */; };
+		1C8076981FE0F790005BAA47 /* NeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8076971FE0F790005BAA47 /* NeonViewController.swift */; };
+		1C80769B1FE0F921005BAA47 /* nenolight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C80769A1FE0F921005BAA47 /* nenolight.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		1C76B5A61FD4ED8A0094B768 /* CurveLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveLineView.swift; sourceTree = "<group>"; };
 		1C76B5A91FD523DF0094B768 /* HexagonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonViewController.swift; sourceTree = "<group>"; };
 		1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiuBianXingView.swift; sourceTree = "<group>"; };
+		1C8076971FE0F790005BAA47 /* NeonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonViewController.swift; sourceTree = "<group>"; };
+		1C80769A1FE0F921005BAA47 /* nenolight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nenolight.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C8076961FE0F77D005BAA47 /* NeonViewController */,
 				1C0292061FD7EFDF0064EF9E /* BBViewController */,
 				1C0291F91FD7C22D0064EF9E /* QQShapViewController */,
 				1C39F95E1FD6882600D00BC7 /* FireworksViewController */,
@@ -219,6 +224,23 @@
 				1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */,
 			);
 			path = HexagonViewController;
+			sourceTree = "<group>";
+		};
+		1C8076961FE0F77D005BAA47 /* NeonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C8076991FE0F921005BAA47 /* images */,
+				1C8076971FE0F790005BAA47 /* NeonViewController.swift */,
+			);
+			path = NeonViewController;
+			sourceTree = "<group>";
+		};
+		1C8076991FE0F921005BAA47 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1C80769A1FE0F921005BAA47 /* nenolight.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +306,7 @@
 				1C76B5951FD4E6CF0094B768 /* LaunchScreen.storyboard in Resources */,
 				1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */,
 				1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */,
+				1C80769B1FE0F921005BAA47 /* nenolight.png in Resources */,
 				1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */,
 				1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */,
 				1C76B5921FD4E6CF0094B768 /* Assets.xcassets in Resources */,
@@ -317,6 +340,7 @@
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
+				1C8076981FE0F790005BAA47 /* NeonViewController.swift in Sources */,
 				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
