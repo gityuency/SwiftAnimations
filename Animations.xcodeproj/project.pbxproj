@@ -27,6 +27,8 @@
 		1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */; };
 		1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C53431F1FE266E100CE7D3F /* PhysicalView.swift */; };
 		1C5343221FE266E100CE7D3F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343201FE266E100CE7D3F /* MotionViewController.swift */; };
+		1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343271FE286EC00CE7D3F /* BubbleView.swift */; };
+		1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343291FE286FA00CE7D3F /* WindowsXPViewController.swift */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPixModel.swift; sourceTree = "<group>"; };
 		1C53431F1FE266E100CE7D3F /* PhysicalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalView.swift; sourceTree = "<group>"; };
 		1C5343201FE266E100CE7D3F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
+		1C5343271FE286EC00CE7D3F /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		1C5343291FE286FA00CE7D3F /* WindowsXPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowsXPViewController.swift; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C5343261FE286E300CE7D3F /* WindowsXPViewController */,
 				1C53431E1FE266D400CE7D3F /* MotionViewController */,
 				1C80769D1FE0FEF9005BAA47 /* NeonViewController */,
 				1CE31F611FDFD078004B8177 /* ButtonsViewController */,
@@ -207,6 +212,15 @@
 				1C53431F1FE266E100CE7D3F /* PhysicalView.swift */,
 			);
 			path = MotionViewController;
+			sourceTree = "<group>";
+		};
+		1C5343261FE286E300CE7D3F /* WindowsXPViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C5343291FE286FA00CE7D3F /* WindowsXPViewController.swift */,
+				1C5343271FE286EC00CE7D3F /* BubbleView.swift */,
+			);
+			path = WindowsXPViewController;
 			sourceTree = "<group>";
 		};
 		1C76B57E1FD4E6CF0094B768 = {
@@ -383,7 +397,9 @@
 				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
+				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
 				1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */,
+				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				1C2776C31FDE85880007679F /* TextShineViewController.swift in Sources */,

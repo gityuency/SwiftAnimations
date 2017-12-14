@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
+        ["WindowsXPViewController": "Windows XP 蓝天白云屏保"],
         ["MotionViewController": "物理效果"],
         ["ButtonsViewController":"按钮效果集合"],
         ["TextShineViewController": "山围故国周遭在,潮打空城寂寞回."],
