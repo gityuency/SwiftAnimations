@@ -125,6 +125,12 @@ class PhysicalView: UIView {
             dynamicItem.addItem(imageView)
         }
         
+        
+        // 在设定完重力方向之后，需要将重力行为、碰撞行为添加到物理仿真器中
+        self.dynamicAnimator.addBehavior(self.gravity)
+        self.dynamicAnimator.addBehavior(self.collision)
+        self.dynamicAnimator.addBehavior(self.dynamicItem)
+        
         getDataDeviceMotion()
     }
     
@@ -138,32 +144,21 @@ class PhysicalView: UIView {
                 
                 if error == nil  {
                     
+                    // Z 轴的及速度就是重力加速度
                     guard  let X = motion?.gravity.x, let Y = motion?.gravity.y, let Z = motion?.gravity.z else {
                         return
                     }
                     
                     print("陀螺仪: X:\(X)  Y:\(Y)  Z:\(Z)")
                     
-                    /// 从陀螺仪获得 XYZ 三个方向的加速度, 然后不断去改变这个重力行为的加速度 这样就可以是 Item 随着手机的晃动而不断移动
+                    // 从陀螺仪获得 XYZ 三个方向的加速度, 然后不断去改变这个重力行为的加速度 这样就可以是 Item 随着手机的晃动而不断移动
+                    // CGVector(dx: 0, dy: 1) 表示加速度竖直向下, CGVector(dx: 1, dy: 1) 表示加速度从左上角到右下角 45°
                     self.gravity.gravityDirection = CGVector(dx: 2 * X, dy: -2 * Y)
-                    
-                    // 在设定完重力方向之后，需要将重力行为、碰撞行为添加到物理仿真器中
-                    self.dynamicAnimator.addBehavior(self.gravity)
-                    self.dynamicAnimator.addBehavior(self.collision)
-                    self.dynamicAnimator.addBehavior(self.dynamicItem)
                     
                 }else{
                     self.motionManager.stopDeviceMotionUpdates()
                 }
             })
-            
-        }else{
-            // 在设定完重力方向之后，需要将重力行为、碰撞行为添加到物理仿真器中
-            gravity.gravityDirection = CGVector(dx: 0, dy: 1)  //比如在模拟器中, Item 从上面掉下来就没有下文了...
-            dynamicAnimator.addBehavior(gravity)
-            dynamicAnimator.addBehavior(collision)
-            dynamicAnimator.addBehavior(dynamicItem)
-            
         }
     }
 }
