@@ -40,6 +40,30 @@ class PhysicalView: UIView {
         return coll
     }()
     
+    
+    /// 元素自身参数行为
+    private lazy var dynamicItem: UIDynamicItemBehavior = {
+        
+        let dyitem = UIDynamicItemBehavior()
+        //设置视图的辅助行为(本身参数 弹性系数 阻力等)
+        // Usually between 0 (inelastic) and 1 (collide elastically)  弹性系数
+        dyitem.elasticity = 0.6;
+        // 0 being no friction between objects slide along each other  摩擦力
+        dyitem.friction = 0.1;
+        // 1 by default                                                密度
+        dyitem.density = 1;
+        // 0: no velocity damping                                      阻力
+        dyitem.resistance = 0;
+        // : no angular velocity damping                               速度阻尼
+        dyitem.angularResistance = 0.2;
+        // force an item to never rotate                               是否允许旋转
+        dyitem.allowsRotation = true;
+        
+        return dyitem
+    }()
+    
+    
+    
     /// 陀螺仪等 使用陀螺仪获得设备的 XYZ 加速度
     private lazy var motionManager: CMMotionManager = {
         let moti = CMMotionManager()
@@ -98,6 +122,7 @@ class PhysicalView: UIView {
             ///把图片添加到 重力行为 碰撞行为
             gravity.addItem(imageView)
             collision.addItem(imageView)
+            dynamicItem.addItem(imageView)
         }
         
         getDataDeviceMotion()
@@ -125,7 +150,7 @@ class PhysicalView: UIView {
                     // 在设定完重力方向之后，需要将重力行为、碰撞行为添加到物理仿真器中
                     self.dynamicAnimator.addBehavior(self.gravity)
                     self.dynamicAnimator.addBehavior(self.collision)
-                    
+                    self.dynamicAnimator.addBehavior(self.dynamicItem)
                     
                 }else{
                     self.motionManager.stopDeviceMotionUpdates()
@@ -137,6 +162,8 @@ class PhysicalView: UIView {
             gravity.gravityDirection = CGVector(dx: 0, dy: 1)  //比如在模拟器中, Item 从上面掉下来就没有下文了...
             dynamicAnimator.addBehavior(gravity)
             dynamicAnimator.addBehavior(collision)
+            dynamicAnimator.addBehavior(dynamicItem)
+            
         }
     }
 }
