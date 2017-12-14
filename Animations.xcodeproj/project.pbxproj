@@ -25,6 +25,8 @@
 		1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */; };
 		1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */; };
 		1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */; };
+		1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C53431F1FE266E100CE7D3F /* PhysicalView.swift */; };
+		1C5343221FE266E100CE7D3F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343201FE266E100CE7D3F /* MotionViewController.swift */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		1C3D8C211FD94B43000600D6 /* YXShapLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXShapLayer.swift; sourceTree = "<group>"; };
 		1C3D8C231FD94B71000600D6 /* QQShapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQShapViewController.swift; sourceTree = "<group>"; };
 		1C3D8C251FD94B8C000600D6 /* YXPixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YXPixModel.swift; sourceTree = "<group>"; };
+		1C53431F1FE266E100CE7D3F /* PhysicalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicalView.swift; sourceTree = "<group>"; };
+		1C5343201FE266E100CE7D3F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C53431E1FE266D400CE7D3F /* MotionViewController */,
 				1C80769D1FE0FEF9005BAA47 /* NeonViewController */,
 				1CE31F611FDFD078004B8177 /* ButtonsViewController */,
 				1C2776C11FDE856C0007679F /* TextShineViewController */,
@@ -193,6 +198,15 @@
 				1C76B5A31FD4ED290094B768 /* LineChartViewController */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1C53431E1FE266D400CE7D3F /* MotionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C5343201FE266E100CE7D3F /* MotionViewController.swift */,
+				1C53431F1FE266E100CE7D3F /* PhysicalView.swift */,
+			);
+			path = MotionViewController;
 			sourceTree = "<group>";
 		};
 		1C76B57E1FD4E6CF0094B768 = {
@@ -382,8 +396,10 @@
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,
 				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
+				1C5343221FE266E100CE7D3F /* MotionViewController.swift in Sources */,
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
+				1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */,
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
 				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 			);
@@ -526,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X3RT5648E;
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuency.Animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X3RT5648E;
 				INFOPLIST_FILE = Animations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuency.Animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
