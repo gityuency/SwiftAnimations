@@ -11,6 +11,9 @@ import UIKit
 /// 当年的 Windows XP 操作系统 蓝天白云屏保
 class BubbleView: UIView {
     
+    /// 定时器
+    private let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+    
     /// 外部使用的属性
     var imageNameArray: Array<String> = Array() {
         didSet{
@@ -71,7 +74,7 @@ class BubbleView: UIView {
             
             let imageView: UIImageView
             
-            imageView = RoundImageView(image: UIImage(named: string))
+            imageView = BubbleImageView(image: UIImage(named: string))
             
             // 图片出生位置随机
             let X = CGFloat(arc4random_uniform(200)) + center.x - 100.0
@@ -81,7 +84,6 @@ class BubbleView: UIView {
             imageView.layer.cornerRadius = 30
             imageView.layer.masksToBounds = true
             
-            imageView.backgroundColor = UIColor.yellow
             addSubview(imageView)
             
             ///把图片添加到 重力行为 碰撞行为
@@ -100,7 +102,6 @@ class BubbleView: UIView {
         
         
         let timeCount = 0
-        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
         codeTimer.schedule(deadline: .now(), repeating: .seconds(1))
         codeTimer.setEventHandler(handler: {
             
@@ -114,10 +115,18 @@ class BubbleView: UIView {
                 }
             }
             
-            if timeCount != 0 {codeTimer.cancel()}
+            if timeCount != 0 {self.codeTimer.cancel()}
         })
         codeTimer.resume()
     }
+    
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        
+        // 取消定时器
+        codeTimer.cancel()
+    }
+    
     
     /// 获得随机重力加速度
     func needXY() -> (XG: CGFloat, YG: CGFloat) {
@@ -135,7 +144,89 @@ class BubbleView: UIView {
         }
         
         print("方向值 \(X), \(Y)")
-
+        
         return (X, Y)
     }
 }
+
+
+/// 气泡图片 View
+fileprivate class BubbleImageView: UIImageView {
+    
+    /// 气泡颜色数组
+    private var colorArray: Array<UIColor> = Array()
+    
+    /// 定时器
+    private var timer: Timer?
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(image: UIImage?) {
+        super.init(image: image)
+        
+        // 预先定义好颜色
+        colorArray = [
+            UIColor.cyan,
+            UIColor.white,
+            UIColor.yellow,
+            UIColor.green,
+            UIColor(red:1.00, green:0.76, blue:0.80, alpha:1.00),
+            UIColor(red:0.73, green:0.35, blue:0.82, alpha:1.00),
+            UIColor(red:0.99, green:0.27, blue:0.12, alpha:1.00),
+            UIColor(red:0.69, green:0.99, blue:0.27, alpha:1.00),
+            UIColor(red:0.16, green:0.57, blue:0.99, alpha:1.00),
+            UIColor(red:0.80, green:0.80, blue:0.99, alpha:1.00),
+            UIColor(red:0.93, green:0.52, blue:0.93, alpha:1.00),
+            UIColor(red:0.87, green:0.72, blue:0.54, alpha:1.00),
+            UIColor(red:0.82, green:0.41, blue:0.17, alpha:1.00),
+            UIColor(red:1.00, green:0.84, blue:0.19, alpha:1.00),
+            UIColor(red:0.61, green:0.96, blue:0.61, alpha:1.00)
+        ]
+        
+        
+        /// 定时器定时改变气泡的颜色
+        let randomTime = 2 + TimeInterval(arc4random_uniform(6)) * 0.5
+        timer = Timer.scheduledTimer(timeInterval: randomTime, target: self, selector: #selector(BubbleImageView.timerEvent), userInfo: nil, repeats: true)
+        
+    }
+    
+    
+    // 重写这个方法, 把 Timer 弄死
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc private func timerEvent() {
+        
+        // 每次定时器方法调用的时候, 都渲染出一张新的颜色的图片
+        let random = Int(arc4random_uniform(UInt32(colorArray.count)))
+        let colorFullImage = image?.imageWithTintColor(color: colorArray[random])
+        
+        // 图片颜色改变的时间也是变化的
+        let duration = 1 + TimeInterval(arc4random_uniform(6)) * 0.2
+        
+        // 改变图片, 让图片在切换的时候自然
+        let contentsAnimation = CABasicAnimation(keyPath: "contents");
+        contentsAnimation.fromValue = layer.contents;       //原始图片
+        contentsAnimation.toValue = colorFullImage?.cgImage //切换后图片
+        contentsAnimation.duration = duration;
+        contentsAnimation.fillMode = kCAFillModeForwards
+        contentsAnimation.isRemovedOnCompletion = false
+        layer.contents = colorFullImage?.cgImage  //动画结束后设置新的图片, 要不然会有突变的生硬的感觉
+        layer.add(contentsAnimation, forKey: nil)
+        
+    }
+    
+    // 重写碰撞的....
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .ellipse
+    }
+}
+
+
+

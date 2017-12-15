@@ -10,6 +10,11 @@ import UIKit
 
 class MotionViewController: YXViewController {
 
+    
+    deinit {
+        print("MotionViewController")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

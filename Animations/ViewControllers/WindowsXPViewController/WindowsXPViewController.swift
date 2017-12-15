@@ -13,13 +13,13 @@ class WindowsXPViewController: YXViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.layer.contents = UIImage(named: "bg_3.jpg")?.cgImage
-        self.title = "蓝天白云"
+        view.layer.contents = UIImage(named: "bg_4.jpg")?.cgImage
+        self.title = "Windows XP"
         
         
         let vvvvv = BubbleView(frame: view.bounds)
         
-        vvvvv.imageNameArray = ["a01.jpg","a02.jpg","a03.jpg","a04.jpg","a05.jpg","a06.jpg","a07.jpg","a08.jpg","a09.jpg","a10.jpg"];
+        vvvvv.imageNameArray = ["bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", "bubble_white", ];
         
         view.addSubview(vvvvv)
     }

@@ -12,7 +12,6 @@ import CoreMotion
 /// 物理效果 View
 class PhysicalView: UIView {
     
-    
     /// 外部使用的属性
     var imageNameArray: Array<String> = Array() {
         didSet{
@@ -72,7 +71,11 @@ class PhysicalView: UIView {
     }()
     
     
-    
+    override func removeFromSuperview() {
+        super.removeFromSuperview()
+        
+        motionManager.stopDeviceMotionUpdates()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -168,14 +171,14 @@ class PhysicalView: UIView {
 
 
 /// 圆形的的图片
-class RoundImageView: UIImageView {
+fileprivate class RoundImageView: UIImageView {
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .ellipse
     }
 }
 
 /// 矩形图片
-class RectangleImageView: UIImageView {
+fileprivate class RectangleImageView: UIImageView {
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .rectangle
     }
@@ -184,7 +187,7 @@ class RectangleImageView: UIImageView {
 
 
 /// 对于不规则的图形, 不知道怎么写
-class PathImageView: UIImageView {
+fileprivate class PathImageView: UIImageView {
     
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .path
