@@ -40,7 +40,7 @@ class BubbleView: UIView {
         let dyitem = UIDynamicItemBehavior()
         //设置视图的辅助行为(本身参数 弹性系数 阻力等)
         // Usually between 0 (inelastic) and 1 (collide elastically)  弹性系数
-        dyitem.elasticity = 0.8;
+        dyitem.elasticity = 0.7;
         // 0 being no friction between objects slide along each other  摩擦力
         dyitem.friction = 0;
         // 1 by default                                                密度
@@ -122,10 +122,9 @@ class BubbleView: UIView {
     /// 获得随机重力加速度
     func needXY() -> (XG: CGFloat, YG: CGFloat) {
         
-        var X = CGFloat(arc4random_uniform(100)) * 0.001
-        var Y = CGFloat(arc4random_uniform(100)) * 0.001
+        var X = CGFloat(arc4random_uniform(100)) * 0.001 * 2
+        var Y = CGFloat(arc4random_uniform(100)) * 0.001 * -2
         
-        print("........\(X). \(Y).......")
         
         if arc4random_uniform(5) % 2 == 0 {
             X *= -1
@@ -135,6 +134,8 @@ class BubbleView: UIView {
             Y *= -1
         }
         
-        return (2 * X, -2 * Y)
+        print("方向值 \(X), \(Y)")
+
+        return (X, Y)
     }
 }
