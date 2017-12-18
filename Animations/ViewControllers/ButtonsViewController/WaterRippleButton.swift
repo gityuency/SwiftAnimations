@@ -46,6 +46,10 @@ class WaterRippleButton: UIButton {
                     return
             }
             
+            if bgColorArray.count < 3 || ripColorArray.count < 3 {
+                assertionFailure("色值系统不对, \(bgColorArray) \(ripColorArray), 请使用 UIColor(red: 1, green: 1, blue: 1, alpha: 1) 方式赋值")
+            }
+            
             colorArray.removeAll()
             
             for i in 1..<20 {

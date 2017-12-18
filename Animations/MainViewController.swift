@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
         ["WindowsXPViewController": "Windows XP"],
         ["MotionViewController": "物理效果"],
         ["ButtonsViewController":"按钮效果集合"],
-        ["TextShineViewController": "山围故国周遭在,潮打空城寂寞回."],
+        ["TextShineViewController": "Deep Dark Fantasies"],
         ["LineChartViewController":"我的月考成绩"],
         ["HexagonViewController":"分析我的KDA"],
         ["ParticleEffecViewController": "粒子效果"],
