@@ -20,8 +20,30 @@ class QQShapViewController: YXViewController {
         qqShap.beginPoint = CGPoint(x: view.center.x, y: 0)
         qqShap.image = UIImage(named: "qq.png")
         view.layer.addSublayer(qqShap)
-
-        qqShap.showAnimation()
+        
+        
+        
+        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+        
+        let timeCount = 0
+        codeTimer.schedule(deadline: .now(), repeating: .seconds(12))
+        codeTimer.setEventHandler(handler: {
+            
+            print("发动机萨克了富家大室")
+            
+            DispatchQueue.main.async {
+                
+                qqShap.showAnimation()
+                
+            }
+            
+            if timeCount != 0 {codeTimer.cancel()}
+        })
+        codeTimer.resume()
+        
+        
+        
+        
         
     }
     

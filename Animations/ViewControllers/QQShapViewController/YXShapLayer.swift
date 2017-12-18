@@ -126,7 +126,7 @@ class YXShapLayer: CALayer {
     
     /// 执行次数计数
     private var runTimes: Int = 0
-
+    
     /// 重写的 draw in context 方法
     override func draw(in ctx: CGContext) {
         
@@ -197,10 +197,16 @@ class YXShapLayer: CALayer {
     
     /// 重置定时器
     private func reset() {
+        
+        for model in pixArray {
+            model.isEnd = false
+        }
+        
         if displayLink != nil {
             displayLink?.invalidate()
             displayLink = nil
             animTime = 0
+            count = 0
         }
     }
     
