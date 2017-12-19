@@ -34,15 +34,13 @@ class TextShineViewController: YXViewController {
         
         
         /// 开始计时
-        gcdTimer.schedule(deadline: .now(), repeating: .seconds(9))
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(7))
         gcdTimer.setEventHandler(handler: {
             
             DispatchQueue.main.async {
                 
                 shineLabel.shineWithCompletion {
-                    
-                    sleep(2)
-                    
+                                        
                     shineLabel.fadeOutWithCompletion {
                         print("一个循环结束了")
                     }
