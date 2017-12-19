@@ -12,7 +12,7 @@ class MotionViewController: YXViewController {
 
     
     deinit {
-        print("MotionViewController")
+        printLog("")
     }
     
     override func viewDidLoad() {

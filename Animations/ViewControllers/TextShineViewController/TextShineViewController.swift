@@ -10,6 +10,13 @@ import UIKit
 
 class TextShineViewController: YXViewController {
     
+    /// 如果 GCD 定时器作为函数内部变量, 是不会触发事件的
+    private let gcdTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+    
+    deinit {
+        printLog("")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +34,8 @@ class TextShineViewController: YXViewController {
         
         
         /// 开始计时
-        
-        let timeCount = 0
-        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
-        codeTimer.schedule(deadline: .now(), repeating: .seconds(9))
-        codeTimer.setEventHandler(handler: {
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(9))
+        gcdTimer.setEventHandler(handler: {
             
             DispatchQueue.main.async {
                 
@@ -40,17 +44,12 @@ class TextShineViewController: YXViewController {
                     sleep(2)
                     
                     shineLabel.fadeOutWithCompletion {
-                        print("潮起潮落结束了")
+                        print("一个循环结束了")
                     }
                 }
             }
-            
-            if timeCount != 0 {codeTimer.cancel()}
         })
-        codeTimer.resume()
-        
+        gcdTimer.resume()
     }
-    
-    
-    
+
 }

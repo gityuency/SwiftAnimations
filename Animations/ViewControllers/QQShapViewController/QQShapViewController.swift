@@ -10,6 +10,14 @@ import UIKit
 
 class QQShapViewController: YXViewController {
     
+    /// 定时器
+    private let gcdTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+
+    deinit {
+        printLog("")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,29 +30,18 @@ class QQShapViewController: YXViewController {
         view.layer.addSublayer(qqShap)
         
         
-        
-        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
-        
-        let timeCount = 0
-        codeTimer.schedule(deadline: .now(), repeating: .seconds(12))
-        codeTimer.setEventHandler(handler: {
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(12))
+        gcdTimer.setEventHandler(handler: {
             
-            print("发动机萨克了富家大室")
+            print("画沙")
             
             DispatchQueue.main.async {
                 
                 qqShap.showAnimation()
                 
             }
-            
-            if timeCount != 0 {codeTimer.cancel()}
         })
-        codeTimer.resume()
-        
-        
-        
-        
+        gcdTimer.resume()
         
     }
-    
 }

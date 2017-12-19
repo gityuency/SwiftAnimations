@@ -22,6 +22,10 @@ class HexagonViewController: YXViewController {
     private var timer2: Timer?
     
     
+    deinit {
+        printLog("六边形")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

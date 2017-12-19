@@ -47,6 +47,7 @@
 		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
 		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
+		1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
 		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
 				1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */,
 				1C9702001FE394440009A131 /* UIImage+Extension.swift */,
+				1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
 				1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */,
 				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
+				1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */,
 				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,

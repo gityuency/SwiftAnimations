@@ -12,10 +12,15 @@ class WindowsXPViewController: YXViewController {
     
     
     /// 定时器
-    private let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+    private let gcdTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
 
     
-    var ccc: Int = 0
+    var count: Int = 0
+    
+    
+    deinit {
+        printLog("再见了, XP")
+    }
     
     
     override func viewDidLoad() {
@@ -37,32 +42,31 @@ class WindowsXPViewController: YXViewController {
         ]
         
         
-        let timeCount = 0
-        codeTimer.schedule(deadline: .now(), repeating: .seconds(4))
-        codeTimer.setEventHandler(handler: {
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(4))
+        
+        gcdTimer.setEventHandler(handler: { [weak self] in //gcd 定时器是当前控制器的属性, gcd 的 block 里面用到了自己的变量, 循环引用
+            
+            guard let weakSelf = self else { return }
             
             DispatchQueue.main.async {
-
+                
                 let contentsAnimation = CABasicAnimation(keyPath: "contents");
-                contentsAnimation.fromValue = self.view.layer.contents;
-                contentsAnimation.toValue = imageArray[self.ccc]
+                contentsAnimation.fromValue = weakSelf.view.layer.contents;
+                contentsAnimation.toValue = imageArray[weakSelf.count]
                 contentsAnimation.duration = 2;
                 contentsAnimation.fillMode = kCAFillModeForwards
                 contentsAnimation.isRemovedOnCompletion = false
-                self.view.layer.contents = imageArray[self.ccc]
-                self.view.layer.add(contentsAnimation, forKey: nil)
+                weakSelf.view.layer.contents = imageArray[weakSelf.count]
+                weakSelf.view.layer.add(contentsAnimation, forKey: nil)
                 
-                if self.ccc == imageArray.count - 1 {
-                    self.ccc = 0
+                if weakSelf.count == imageArray.count - 1 {
+                    weakSelf.count = 0
                 } else {
-                    self.ccc += 1
+                    weakSelf.count += 1
                 }
-                
             }
-            
-            if timeCount != 0 {self.codeTimer.cancel()}
         })
-        codeTimer.resume()
+        gcdTimer.resume()
         
         
         /// 使用气泡
@@ -72,6 +76,4 @@ class WindowsXPViewController: YXViewController {
         
         view.addSubview(vvvvv)
     }
-    
-    
 }

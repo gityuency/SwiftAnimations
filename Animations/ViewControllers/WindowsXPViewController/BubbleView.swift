@@ -1,6 +1,8 @@
 //
 //  BubbleView.swift
-//  核心动画练习
+//  阳光下的泡沫 是彩色的 就像被骗的我 是幸福的
+//  日差しの下のバブルはカラーです　騙された私のように　幸せです
+//  colorfull bubble in sunshine I'm cheated but happy
 //
 //  Created by yuency on 14/12/2017.
 //  Copyright © 2017 sunny. All rights reserved.
@@ -8,11 +10,13 @@
 
 import UIKit
 
-/// 当年的 Windows XP 操作系统 蓝天白云屏保
+/// 当年的 Windows XP  蓝天白云
 class BubbleView: UIView {
     
-    /// 定时器
-    private let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+    /*
+      定时器  解除循环引用方案1: 在视图消失的函数里面 取消定时器  gcdTimer.cancel()  方案2: 定时器的 block 用到了 self 的属性, 解除引用循环
+     */
+    private let gcdTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
     
     /// 外部使用的属性
     var imageNameArray: Array<String> = Array() {
@@ -58,6 +62,11 @@ class BubbleView: UIView {
         return dyitem
     }()
     
+    
+    deinit {
+        printLog("不吹泡泡")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -101,30 +110,29 @@ class BubbleView: UIView {
         self.dynamicAnimator.addBehavior(self.dynamicItem)
         
         
-        let timeCount = 0
-        codeTimer.schedule(deadline: .now(), repeating: .seconds(1))
-        codeTimer.setEventHandler(handler: {
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(1))
+        gcdTimer.setEventHandler(handler: { [weak self] in
+            
+            guard let weakSelf = self else { return }
             
             DispatchQueue.main.async {
                 
-                for behavior in self.dynamicAnimator.behaviors {
+                for behavior in weakSelf.dynamicAnimator.behaviors {
                     if let gravity = behavior as? UIGravityBehavior {
-                        let XY = self.needXY()
+                        let XY = weakSelf.needXY()
                         gravity.gravityDirection = CGVector(dx: XY.XG, dy: XY.YG)
                     }
                 }
             }
-            
-            if timeCount != 0 {self.codeTimer.cancel()}
         })
-        codeTimer.resume()
+        gcdTimer.resume()
     }
     
     override func removeFromSuperview() {
         super.removeFromSuperview()
         
-        // 取消定时器
-        codeTimer.cancel()
+        // 取消定时器  //如果在 block 中不使用 [weak self], 在这里 取消定时器也能解除循环引用
+        //gcdTimer.cancel()
     }
     
     
@@ -158,6 +166,11 @@ fileprivate class BubbleImageView: UIImageView {
     
     /// 定时器
     private var timer: Timer?
+    
+    
+    deinit {
+        printLog("泡泡破灭")
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -193,7 +206,7 @@ fileprivate class BubbleImageView: UIImageView {
     }
     
     
-    // 重写这个方法, 把 Timer 弄死
+    // 重写这个方法, 把 Timer 弄死 否则会有循环引用!
     override func removeFromSuperview() {
         super.removeFromSuperview()
         

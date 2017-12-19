@@ -10,6 +10,9 @@ import UIKit
 
 class LineChartViewController: YXViewController {
 
+    /// 定时器
+    private let gcdTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
+
     
     let vv = CurveLineView()
     
@@ -18,6 +21,7 @@ class LineChartViewController: YXViewController {
     deinit {
         print("控制器 LineChartViewController 已经释放...")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +33,11 @@ class LineChartViewController: YXViewController {
         
         vv.center = view.center
         
-    
         
-        
-        let timeCount = 0
-        let codeTimer = DispatchSource.makeTimerSource(queue: DispatchQueue.global())
-        codeTimer.schedule(deadline: .now(), repeating: .seconds(4))
-        codeTimer.setEventHandler(handler: {
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(4))
+        gcdTimer.setEventHandler(handler: { [weak self] in
+            
+            guard let weakSelf = self else { return }
             
             DispatchQueue.main.async {
                 
@@ -56,13 +58,12 @@ class LineChartViewController: YXViewController {
                 }
                 
                 // 传入数组,就重新开始画图
-                self.vv.scoreArray = persentArray
+                weakSelf.vv.scoreArray = persentArray
                 
             }
             
-            if timeCount != 0 {codeTimer.cancel()}
         })
-        codeTimer.resume()
+        gcdTimer.resume()
         
     }
     
