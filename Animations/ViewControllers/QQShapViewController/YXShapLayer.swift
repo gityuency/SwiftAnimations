@@ -2,6 +2,14 @@
 //  YXShapLayer.swift
 //  Animations
 //
+//  用手中的流沙画一个你呀
+//  曾经说过的永远我们一定不会擦
+//  我的青春开始在喧哗
+//  因为大声说爱你而沙哑
+
+//  用手中流沙轻描着你的脸颊
+//  也答应说好的未来决不会重画
+//
 //  Created by yuency on 07/12/2017.
 //  Copyright © 2017 sunny. All rights reserved.
 //
@@ -15,7 +23,7 @@ import QuartzCore
  http://www.jianshu.com/p/2d6014b226d6     //原作者 简书教程
  */
 
-/// 粒子
+/// 画沙
 class YXShapLayer: CALayer {
     
     /// layer 自身的宽度
@@ -86,7 +94,7 @@ class YXShapLayer: CALayer {
                     let A = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
                     
                     if A == 0 || (ignoredBlack && R + G + B == 3) || (ignoredBlack && R + G + B == 0) {
-                        continue  //忽略不需要的粒子
+                        continue  //忽略不需要的粒子  黑 白 透明
                     }
                     
                     let model = YXPixModel()

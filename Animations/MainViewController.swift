@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         ["ParticleEffecViewController": "粒子效果"],
         ["NeonViewController": "散射粒子"],
         ["SnowViewController": "下雪了"],
-        ["FireworksViewController": "一起去看花火吧"],
+        ["FireworksViewController": "打上花火"],
         ["QQShapViewController": "用手中的流沙画一个你呀"],
         ["BBViewController": "画图"],
         ]

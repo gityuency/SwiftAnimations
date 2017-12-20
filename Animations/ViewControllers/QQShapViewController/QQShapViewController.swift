@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 画沙
 class QQShapViewController: YXViewController {
     
     /// 定时器
@@ -16,7 +17,6 @@ class QQShapViewController: YXViewController {
     deinit {
         printLog("")
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class QQShapViewController: YXViewController {
         view.layer.addSublayer(qqShap)
         
         
-        gcdTimer.schedule(deadline: .now(), repeating: .seconds(12))
+        gcdTimer.schedule(deadline: .now(), repeating: .seconds(14))
         gcdTimer.setEventHandler(handler: {
             
             print("画沙")
