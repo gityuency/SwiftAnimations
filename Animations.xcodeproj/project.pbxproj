@@ -29,6 +29,12 @@
 		1C5343221FE266E100CE7D3F /* MotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343201FE266E100CE7D3F /* MotionViewController.swift */; };
 		1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343271FE286EC00CE7D3F /* BubbleView.swift */; };
 		1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5343291FE286FA00CE7D3F /* WindowsXPViewController.swift */; };
+		1C539F9D1FECEA3300C6027A /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539F9B1FECEA3300C6027A /* Easing.swift */; };
+		1C539F9E1FECEA3300C6027A /* YXEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539F9C1FECEA3300C6027A /* YXEasing.swift */; };
+		1C539FA21FECEA3E00C6027A /* XLWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539F9F1FECEA3E00C6027A /* XLWave.swift */; };
+		1C539FA31FECEA3E00C6027A /* CountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539FA01FECEA3E00C6027A /* CountLabel.swift */; };
+		1C539FA41FECEA3E00C6027A /* EnergySphereView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539FA11FECEA3E00C6027A /* EnergySphereView.swift */; };
+		1C539FA61FECEA5C00C6027A /* EnergyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C539FA51FECEA5C00C6027A /* EnergyViewController.swift */; };
 		1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */; };
 		1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B58C1FD4E6CF0094B768 /* ViewController.swift */; };
 		1C76B5901FD4E6CF0094B768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C76B58E1FD4E6CF0094B768 /* Main.storyboard */; };
@@ -73,6 +79,12 @@
 		1C5343201FE266E100CE7D3F /* MotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionViewController.swift; sourceTree = "<group>"; };
 		1C5343271FE286EC00CE7D3F /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		1C5343291FE286FA00CE7D3F /* WindowsXPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowsXPViewController.swift; sourceTree = "<group>"; };
+		1C539F9B1FECEA3300C6027A /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
+		1C539F9C1FECEA3300C6027A /* YXEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YXEasing.swift; sourceTree = "<group>"; };
+		1C539F9F1FECEA3E00C6027A /* XLWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XLWave.swift; sourceTree = "<group>"; };
+		1C539FA01FECEA3E00C6027A /* CountLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountLabel.swift; sourceTree = "<group>"; };
+		1C539FA11FECEA3E00C6027A /* EnergySphereView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnergySphereView.swift; sourceTree = "<group>"; };
+		1C539FA51FECEA5C00C6027A /* EnergyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyViewController.swift; sourceTree = "<group>"; };
 		1C76B5871FD4E6CF0094B768 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C76B58A1FD4E6CF0094B768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C76B58C1FD4E6CF0094B768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +205,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1C539F991FECEA1100C6027A /* EnergyViewController */,
 				1C5343261FE286E300CE7D3F /* WindowsXPViewController */,
 				1C53431E1FE266D400CE7D3F /* MotionViewController */,
 				1C80769D1FE0FEF9005BAA47 /* NeonViewController */,
@@ -227,6 +240,26 @@
 			path = WindowsXPViewController;
 			sourceTree = "<group>";
 		};
+		1C539F991FECEA1100C6027A /* EnergyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1C539FA51FECEA5C00C6027A /* EnergyViewController.swift */,
+				1C539FA11FECEA3E00C6027A /* EnergySphereView.swift */,
+				1C539FA01FECEA3E00C6027A /* CountLabel.swift */,
+				1C539F9F1FECEA3E00C6027A /* XLWave.swift */,
+			);
+			path = EnergyViewController;
+			sourceTree = "<group>";
+		};
+		1C539F9A1FECEA2B00C6027A /* Easing */ = {
+			isa = PBXGroup;
+			children = (
+				1C539F9B1FECEA3300C6027A /* Easing.swift */,
+				1C539F9C1FECEA3300C6027A /* YXEasing.swift */,
+			);
+			path = Easing;
+			sourceTree = "<group>";
+		};
 		1C76B57E1FD4E6CF0094B768 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +288,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1C539F9A1FECEA2B00C6027A /* Easing */,
 				1C76B59E1FD4E9430094B768 /* Tools */,
 			);
 			path = Animations;
@@ -399,24 +433,29 @@
 			files = (
 				1C76B59D1FD4E8E50094B768 /* MainViewController.swift in Sources */,
 				1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */,
+				1C539F9E1FECEA3300C6027A /* YXEasing.swift in Sources */,
 				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
 				1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */,
 				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
+				1C539FA31FECEA3E00C6027A /* CountLabel.swift in Sources */,
 				1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */,
 				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				1C2776C31FDE85880007679F /* TextShineViewController.swift in Sources */,
+				1C539FA41FECEA3E00C6027A /* EnergySphereView.swift in Sources */,
 				1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */,
 				1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */,
 				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
+				1C539FA61FECEA5C00C6027A /* EnergyViewController.swift in Sources */,
 				1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
 				1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */,
+				1C539F9D1FECEA3300C6027A /* Easing.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,
 				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
@@ -425,6 +464,7 @@
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
 				1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */,
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
+				1C539FA21FECEA3E00C6027A /* XLWave.swift in Sources */,
 				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

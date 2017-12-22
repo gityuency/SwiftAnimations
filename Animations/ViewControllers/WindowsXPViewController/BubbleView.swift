@@ -162,25 +162,9 @@ class BubbleView: UIView {
 fileprivate class BubbleImageView: UIImageView {
     
     /// 气泡颜色数组
-    private var colorArray: Array<UIColor> = Array()
-    
-    /// 定时器
-    private var timer: Timer?
-    
-    
-    deinit {
-        printLog("泡泡破灭")
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override init(image: UIImage?) {
-        super.init(image: image)
+    lazy private var colorArray: Array<UIColor> = {
         
-        // 预先定义好颜色
-        colorArray = [
+        return [
             UIColor.cyan,
             UIColor.white,
             UIColor.yellow,
@@ -197,7 +181,22 @@ fileprivate class BubbleImageView: UIImageView {
             UIColor(red:1.00, green:0.84, blue:0.19, alpha:1.00),
             UIColor(red:0.61, green:0.96, blue:0.61, alpha:1.00)
         ]
-        
+    }()
+    
+    /// 定时器
+    private var timer: Timer?
+    
+    
+    deinit {
+        printLog("泡泡破灭")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(image: UIImage?) {
+        super.init(image: image)
         
         /// 定时器定时改变气泡的颜色
         let randomTime = 2 + TimeInterval(arc4random_uniform(6)) * 0.5
