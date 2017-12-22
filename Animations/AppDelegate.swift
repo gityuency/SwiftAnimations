@@ -8,6 +8,11 @@
 
 import UIKit
 
+/*
+ 我的 Bundle ID  com.yuency.Animations
+ */
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

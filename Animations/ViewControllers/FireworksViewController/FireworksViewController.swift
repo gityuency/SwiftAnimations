@@ -13,6 +13,9 @@ class FireworksViewController: YXViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.layer.contents = UIImage(named: "bg_10.jpg")?.cgImage
+
+        
         /* 这个粒子参数很难调, 想要调出惊人的效果需要美学, 很遗憾, 我没有 */
         
         
@@ -77,6 +80,8 @@ class FireworksViewController: YXViewController {
         spark.lifetime          = 3;
         spark.lifetimeRange     = 0.5
         spark.contents          = UIImage(named: "spark")?.cgImage
+        
+        spark.speed = 2
         
         spark.scale = 0.3
         spark.scaleRange = 0.1

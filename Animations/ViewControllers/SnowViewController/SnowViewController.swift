@@ -8,12 +8,14 @@
 
 import UIKit
 
+/// 雪花 图片
 class SnowViewController: YXViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        view.layer.contents = UIImage(named: "bg_9.jpg")?.cgImage
+
         
         view.backgroundColor = UIColor.black
         

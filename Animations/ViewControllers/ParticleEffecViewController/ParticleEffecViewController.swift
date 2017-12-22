@@ -15,6 +15,8 @@ class ParticleEffecViewController: YXViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.layer.contents = UIImage(named: "bg_8.jpg")?.cgImage
+
 
         view.backgroundColor = UIColor.black
 

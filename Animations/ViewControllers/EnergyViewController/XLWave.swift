@@ -50,11 +50,12 @@ class XLWave: UIView {
      y，值
      这个效果主要的思路是添加两条曲线 一条正玄曲线、一条余弦曲线 然后在曲线下添加深浅不同的背景颜色，从而达到波浪显示的效果
      */
-    
-    /// 背景波浪颜色
-    var backWaveColor = UIColor(red:0.17, green:0.66, blue:0.43, alpha:1.00)
+
     /// 前景波浪颜色
-    var frontWaveColor = UIColor(red:0.24, green:0.67, blue:0.99, alpha:1.00)
+    var frontWaveColor = UIColor(red:0.15, green:0.53, blue:0.92, alpha:1.00) 
+
+    /// 背景波浪颜色
+    var backWaveColor = UIColor(red:0.13, green:0.46, blue:0.79, alpha:1.00)
 
     /// 前面的波浪
     private let waveLayer1 = CAShapeLayer()

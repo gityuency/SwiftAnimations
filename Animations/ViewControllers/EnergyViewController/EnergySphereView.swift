@@ -62,7 +62,7 @@ class EnergySphereView: UIView {
         super.init(frame: frame)
         
         setUpView()
-    
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -74,7 +74,7 @@ class EnergySphereView: UIView {
     private let lightCirlceLayer = CAShapeLayer()
     /// 暗环
     let darkCirlceLayer = CAShapeLayer()
-
+    
     /// 波浪
     private var wave: XLWave?
     
@@ -154,6 +154,7 @@ class EnergySphereView: UIView {
         wave?.progress = progress
         
     }
+    
     
     
     /// 获得随机颜色
