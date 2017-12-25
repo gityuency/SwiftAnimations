@@ -1,6 +1,7 @@
 # SwiftAnimations
 啊你妹
 
+简书: https://www.jianshu.com/p/d0433d88771b
 
 ###  第 1  集  -  代表作 
 
