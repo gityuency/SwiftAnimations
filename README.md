@@ -24,8 +24,6 @@ The Deep Dark Fantasies
 
 
 
-
-
 ###  第 4  集  -  明天月考
 ![成绩曲线.gif](http://upload-images.jianshu.io/upload_images/1235875-0397d9b8810aefef.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
