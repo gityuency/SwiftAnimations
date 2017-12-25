@@ -16,10 +16,10 @@
 
 
 ###  第 3  集  -  愿天堂没有木吉
-My name is Van
-I'm an artist I'm a performance artist
-I'm hired for people to profile fantasies
-The Deep Dark Fantasies
+My name is Van 
+I'm an artist I'm a performance artist 
+I'm hired for people to profile fantasies 
+The Deep Dark Fantasies 
 ![DeepDark.gif](http://upload-images.jianshu.io/upload_images/1235875-a49a31d8791ec7a0.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -55,11 +55,11 @@ The Deep Dark Fantasies
 
 
 ###  第 9  集  -  打上花火
-パッ光って咲いた
-花火を見てた
-きっとまだ終わらない夏が
-曖昧な心を解かして繋いだ
-この夜が続いて欲しかった
+パッ光って咲いた 
+花火を見てた 
+きっとまだ終わらない夏が 
+曖昧な心を解かして繋いだ 
+この夜が続いて欲しかった 
 ![打上花火.gif](http://upload-images.jianshu.io/upload_images/1235875-0d699133ee844385.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -73,10 +73,10 @@ The Deep Dark Fantasies
 
 
 ###  第 12  集  -  画沙
-用手中的流沙画一个你呀
-曾说过的永远我们一定不会擦
-用手中流沙轻描着你的脸颊
-也答应说好的未来绝不会重画
+用手中的流沙画一个你呀 
+曾说过的永远我们一定不会擦 
+用手中流沙轻描着你的脸颊 
+也答应说好的未来绝不会重画 
 ![画沙.gif](http://upload-images.jianshu.io/upload_images/1235875-f3591924e2b6eb6b.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ###  第 13  集  -  光能使者
