@@ -50,6 +50,7 @@
 		1C8076A11FE0FEF9005BAA47 /* nenolight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C80769F1FE0FEF9005BAA47 /* nenolight.png */; };
 		1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */; };
 		1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9702001FE394440009A131 /* UIImage+Extension.swift */; };
+		1CC435291FF254BB00DE29A9 /* Memo_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC435281FF254BB00DE29A9 /* Memo_01.swift */; };
 		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
 		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
@@ -102,6 +103,7 @@
 		1C80769F1FE0FEF9005BAA47 /* nenolight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nenolight.png; sourceTree = "<group>"; };
 		1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonViewController.swift; sourceTree = "<group>"; };
 		1C9702001FE394440009A131 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		1CC435281FF254BB00DE29A9 /* Memo_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo_01.swift; sourceTree = "<group>"; };
 		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
 		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
+				1CC435271FF2547C00DE29A9 /* Memo */,
 				1C539F9A1FECEA2B00C6027A /* Easing */,
 				1C76B59E1FD4E9430094B768 /* Tools */,
 			);
@@ -339,6 +342,14 @@
 				1C80769F1FE0FEF9005BAA47 /* nenolight.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		1CC435271FF2547C00DE29A9 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				1CC435281FF254BB00DE29A9 /* Memo_01.swift */,
+			);
+			path = Memo;
 			sourceTree = "<group>";
 		};
 		1CE31F611FDFD078004B8177 /* ButtonsViewController */ = {
@@ -437,6 +448,7 @@
 				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
 				1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */,
 				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
+				1CC435291FF254BB00DE29A9 /* Memo_01.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
