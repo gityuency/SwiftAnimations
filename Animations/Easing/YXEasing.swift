@@ -19,7 +19,7 @@ func RADIANS_TO_DEGREES(radians: CGFloat) -> CGFloat {
 
 /// 角度转弧度
 func DEGREES_TO_RADIANS(angle: CGFloat) -> CGFloat {
-    return angle / (180.0 * CGFloat.pi)
+    return angle / 180.0 * CGFloat.pi
 }
 
 
