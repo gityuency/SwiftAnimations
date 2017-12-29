@@ -51,6 +51,7 @@
 		1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */; };
 		1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9702001FE394440009A131 /* UIImage+Extension.swift */; };
 		1CC435291FF254BB00DE29A9 /* Memo_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC435281FF254BB00DE29A9 /* Memo_01.swift */; };
+		1CC7490B1FF5F1B000F04461 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */; };
 		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
 		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
@@ -104,6 +105,7 @@
 		1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonViewController.swift; sourceTree = "<group>"; };
 		1C9702001FE394440009A131 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		1CC435281FF254BB00DE29A9 /* Memo_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo_01.swift; sourceTree = "<group>"; };
+		1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
 		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		1C76B59E1FD4E9430094B768 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */,
 				1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */,
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
 				1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */,
@@ -472,6 +475,7 @@
 				1C76B5A11FD4E9430094B768 /* Bundle+Extension.swift in Sources */,
 				1C39F9501FD684C000D00BC7 /* ParticleEffecViewController.swift in Sources */,
 				1C5343221FE266E100CE7D3F /* MotionViewController.swift in Sources */,
+				1CC7490B1FF5F1B000F04461 /* Array+Extension.swift in Sources */,
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
 				1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */,
