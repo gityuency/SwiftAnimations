@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+/// 导航栏按钮 扩展
 extension UIBarButtonItem {
 
     
@@ -23,7 +25,7 @@ extension UIBarButtonItem {
     convenience init(title: String, fontSize: CGFloat = 16, target:Any?, action: Selector, isBackButton: Bool = false) {
         
         
-        let btn: UIButton = UIButton.cz_textButton(title: title, fontSize: fontSize, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange, backgroundImageName: nil)
+        let btn: UIButton = UIButton.yxTextButton(title: title, fontSize: fontSize, normalColor: UIColor.darkGray, highlightedColor: UIColor.orange, backgroundImageName: nil)
         
         
         if isBackButton {
@@ -40,45 +42,5 @@ extension UIBarButtonItem {
     }
     
 
-}
-
-
-extension UIButton {
-    
-    
-    static func cz_textButton(title: String, fontSize: CGFloat, normalColor: UIColor, highlightedColor: UIColor, backgroundImageName: String?) -> UIButton {
-        
-        let button = UIButton()
-        
-        
-        button.setTitle(title, for: .normal)
-        
-        button.setTitleColor(normalColor, for: .normal)
-        
-        button.setTitleColor(highlightedColor, for: .highlighted)
-        
-        button.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
-        
-        if let backgroundImageName = backgroundImageName {
-            
-            button.setBackgroundImage(UIImage(named: backgroundImageName), for: .normal)
-            
-            let backgroundImageNameHL = backgroundImageName.appending("_highlighted")
-            
-            button.setBackgroundImage(UIImage(named: backgroundImageNameHL), for: .highlighted)
-            
-        }
-        
-     button.sizeToFit()
-        
-        
-        return button;
-        
-        
-    }
-    
-   
-    
-    
 }
 

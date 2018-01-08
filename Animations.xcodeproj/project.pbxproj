@@ -53,6 +53,7 @@
 		1C9535F8200306C800A48E67 /* EFBaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535F5200306C800A48E67 /* EFBaseTabbarController.swift */; };
 		1C9535F9200306C800A48E67 /* EFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535F6200306C800A48E67 /* EFBaseViewController.swift */; };
 		1C9535FB2003072B00A48E67 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */; };
+		1C9535FD2003081F00A48E67 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */; };
 		1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9702001FE394440009A131 /* UIImage+Extension.swift */; };
 		1CC7490B1FF5F1B000F04461 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */; };
 		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
@@ -110,6 +111,7 @@
 		1C9535F5200306C800A48E67 /* EFBaseTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFBaseTabbarController.swift; sourceTree = "<group>"; };
 		1C9535F6200306C800A48E67 /* EFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFBaseViewController.swift; sourceTree = "<group>"; };
 		1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		1C9702001FE394440009A131 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */,
+				1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */,
 				1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */,
 				1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */,
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
@@ -463,6 +466,7 @@
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
+				1C9535FD2003081F00A48E67 /* UIButton+Extension.swift in Sources */,
 				1C539FA31FECEA3E00C6027A /* CountLabel.swift in Sources */,
 				1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */,
 				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
