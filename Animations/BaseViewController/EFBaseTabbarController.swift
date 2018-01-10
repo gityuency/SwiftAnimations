@@ -77,7 +77,7 @@ class EFBaseTabbarController: UITabBarController {
         
         
         //设置随机的背景色
-        vc.view.backgroundColor = UIColor.randomColor()
+        vc.view.backgroundColor = UIColor.randomColor
         
         //实例化导航控制器的时候,会调用 Push 方法将 rootVC 压入栈底
         let nav = EFBaseNavigationController(rootViewController: vc)
