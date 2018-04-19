@@ -51,6 +51,7 @@ class MainViewController: UIViewController {
         tableView = UITableView(frame: UIScreen.main.bounds)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
         view.addSubview(tableView)
         
         //注册 cell 重用的正确姿势
