@@ -49,8 +49,12 @@
 		1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */; };
 		1C8076A11FE0FEF9005BAA47 /* nenolight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C80769F1FE0FEF9005BAA47 /* nenolight.png */; };
 		1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */; };
+		1C9535F7200306C800A48E67 /* EFBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535F4200306C800A48E67 /* EFBaseNavigationController.swift */; };
+		1C9535F8200306C800A48E67 /* EFBaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535F5200306C800A48E67 /* EFBaseTabbarController.swift */; };
+		1C9535F9200306C800A48E67 /* EFBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535F6200306C800A48E67 /* EFBaseViewController.swift */; };
+		1C9535FB2003072B00A48E67 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */; };
+		1C9535FD2003081F00A48E67 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */; };
 		1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9702001FE394440009A131 /* UIImage+Extension.swift */; };
-		1CC435291FF254BB00DE29A9 /* Memo_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC435281FF254BB00DE29A9 /* Memo_01.swift */; };
 		1CC7490B1FF5F1B000F04461 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */; };
 		1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */; };
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
@@ -103,8 +107,12 @@
 		1C76B5AB1FD5240D0094B768 /* LiuBianXingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiuBianXingView.swift; sourceTree = "<group>"; };
 		1C80769F1FE0FEF9005BAA47 /* nenolight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nenolight.png; sourceTree = "<group>"; };
 		1C8076A01FE0FEF9005BAA47 /* NeonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeonViewController.swift; sourceTree = "<group>"; };
+		1C9535F4200306C800A48E67 /* EFBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFBaseNavigationController.swift; sourceTree = "<group>"; };
+		1C9535F5200306C800A48E67 /* EFBaseTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFBaseTabbarController.swift; sourceTree = "<group>"; };
+		1C9535F6200306C800A48E67 /* EFBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFBaseViewController.swift; sourceTree = "<group>"; };
+		1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		1C9702001FE394440009A131 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		1CC435281FF254BB00DE29A9 /* Memo_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo_01.swift; sourceTree = "<group>"; };
 		1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		1CE31F621FDFD090004B8177 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
@@ -292,7 +300,7 @@
 				1C76B5911FD4E6CF0094B768 /* Assets.xcassets */,
 				1C76B5931FD4E6CF0094B768 /* LaunchScreen.storyboard */,
 				1C76B5961FD4E6CF0094B768 /* Info.plist */,
-				1CC435271FF2547C00DE29A9 /* Memo */,
+				1C9535F3200306C800A48E67 /* BaseViewController */,
 				1C539F9A1FECEA2B00C6027A /* Easing */,
 				1C76B59E1FD4E9430094B768 /* Tools */,
 			);
@@ -302,6 +310,8 @@
 		1C76B59E1FD4E9430094B768 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1C9535FA2003072B00A48E67 /* UIBarButtonItem+Extension.swift */,
+				1C9535FC2003081F00A48E67 /* UIButton+Extension.swift */,
 				1CC7490A1FF5F1B000F04461 /* Array+Extension.swift */,
 				1C76B59F1FD4E9430094B768 /* Bundle+Extension.swift */,
 				1C76B5A01FD4E9430094B768 /* UIView+Extension.swift */,
@@ -347,12 +357,14 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		1CC435271FF2547C00DE29A9 /* Memo */ = {
+		1C9535F3200306C800A48E67 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1CC435281FF254BB00DE29A9 /* Memo_01.swift */,
+				1C9535F4200306C800A48E67 /* EFBaseNavigationController.swift */,
+				1C9535F5200306C800A48E67 /* EFBaseTabbarController.swift */,
+				1C9535F6200306C800A48E67 /* EFBaseViewController.swift */,
 			);
-			path = Memo;
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		1CE31F611FDFD078004B8177 /* ButtonsViewController */ = {
@@ -451,10 +463,10 @@
 				1C2776C51FDE85990007679F /* YXShineLabel.swift in Sources */,
 				1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */,
 				1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */,
-				1CC435291FF254BB00DE29A9 /* Memo_01.swift in Sources */,
 				1C76B5A51FD4ED7C0094B768 /* LineChartViewController.swift in Sources */,
 				1C3D8C241FD94B71000600D6 /* QQShapViewController.swift in Sources */,
 				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
+				1C9535FD2003081F00A48E67 /* UIButton+Extension.swift in Sources */,
 				1C539FA31FECEA3E00C6027A /* CountLabel.swift in Sources */,
 				1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */,
 				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
@@ -463,12 +475,15 @@
 				1C2776C31FDE85880007679F /* TextShineViewController.swift in Sources */,
 				1C539FA41FECEA3E00C6027A /* EnergySphereView.swift in Sources */,
 				1C3D8C221FD94B43000600D6 /* YXShapLayer.swift in Sources */,
+				1C9535F9200306C800A48E67 /* EFBaseViewController.swift in Sources */,
 				1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */,
 				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
 				1C539FA61FECEA5C00C6027A /* EnergyViewController.swift in Sources */,
 				1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */,
+				1C9535F8200306C800A48E67 /* EFBaseTabbarController.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
+				1C9535F7200306C800A48E67 /* EFBaseNavigationController.swift in Sources */,
 				1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */,
 				1C539F9D1FECEA3300C6027A /* Easing.swift in Sources */,
 				1C76B5A21FD4E9430094B768 /* UIView+Extension.swift in Sources */,
@@ -480,6 +495,7 @@
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
 				1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */,
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
+				1C9535FB2003072B00A48E67 /* UIBarButtonItem+Extension.swift in Sources */,
 				1C539FA21FECEA3E00C6027A /* XLWave.swift in Sources */,
 				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 			);
@@ -620,11 +636,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X3RT5648E;
+				DEVELOPMENT_TEAM = DPG7R2T6WP;
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuency;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -638,11 +654,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X3RT5648E;
+				DEVELOPMENT_TEAM = DPG7R2T6WP;
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuency;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

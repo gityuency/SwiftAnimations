@@ -20,21 +20,25 @@ class YXPixModel {
     
     /// 像素的 Y 坐标 (整型)
     var pointY: Int = 0
-
+    
     /// 每个像素延迟时间
     var delayTime: CGFloat = 0
     
     /// 每个像素持续时间
-    var delayDuration: CGFloat = 0
+    var durationTime: CGFloat = 0
     
     /// 标记这个像素点是否已经到达目的地
     var isEnd = false
     
+    /// 粒子总时间
+    private(set) var allTime: CGFloat
     
     init() {
         delayTime = CGFloat(arc4random_uniform(30))
-        delayDuration = CGFloat(arc4random_uniform(10))
+        durationTime = CGFloat(arc4random_uniform(20))
+        allTime = delayTime + durationTime
     }
     
 }
+
 

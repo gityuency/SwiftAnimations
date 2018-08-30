@@ -43,8 +43,7 @@ class YXShapLayer: CALayer {
     private var displayLink: CADisplayLink?
     /// 动画时间
     private var animTime: CGFloat = 0
-    /// 动画持续时间
-    private var animDuration: CGFloat = 10
+    
     /// 粒子出生位置，默认在左边顶上
     var beginPoint: CGPoint = CGPoint(x: 0, y: 0)
     
@@ -75,8 +74,7 @@ class YXShapLayer: CALayer {
             YHeight = (YHeight / 2 == 0.0) ? YHeight : YHeight - 1
             let YH = Int(YHeight)
             
-            
-            var array: Array<YXPixModel> = Array()  // 二维数组, 从第一行开始到最后一行,往下打印图片
+            var array: Array<YXPixModel> = Array()  //存储粒子模型
             
             let pixelData = image.cgImage?.dataProvider?.data
             
@@ -93,7 +91,7 @@ class YXShapLayer: CALayer {
                     let B = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
                     let A = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
                     
-                    if A == 0 || (ignoredBlack && R + G + B == 3) || (ignoredBlack && R + G + B == 0) {
+                    if A == 0 || (ignoredWhite && R + G + B == 3) || (ignoredBlack && R + G + B == 0) {
                         continue  //忽略不需要的粒子  黑 白 透明
                     }
                     
@@ -104,13 +102,10 @@ class YXShapLayer: CALayer {
                     array.append(model)
                 }
             }
-            
             pixArray = array
-            
             array.removeAll()
         }
     }
-    
     
     override init() {
         super.init()
@@ -125,7 +120,7 @@ class YXShapLayer: CALayer {
     @objc func emitterAnim(displayLink: CADisplayLink) {
         setNeedsDisplay() //激活画图
         
-        animTime += 0.2 //放下多少的粒子?
+        animTime += 0.2 //用于控制粒子的下放速度
     }
     
     
@@ -144,7 +139,7 @@ class YXShapLayer: CALayer {
         
         for model in pixArray {
             
-            if model.delayTime > animTime { //每个像素都有它的延时时间,是随机出生的, 如果这个时间比动画到达的时间大, 就先不要让这个像素出来
+            if model.delayTime >= animTime { //每个像素都有它的延时时间,是随机出生的, 如果这个时间比动画到达的时间大, 就先不要让这个像素出来
                 continue
             }
             
@@ -154,27 +149,21 @@ class YXShapLayer: CALayer {
                 continue;
             }
             
-            var curTime = animTime - model.delayTime //..
+            //代码到达这里,表示,animTime 已经大于 model.delayTime, 这个时候粒子应该入场, 算出这个粒子入场的时间
+            let currentTime = animTime - model.delayTime
             
-            let easeDuration = animDuration + model.delayDuration //缓动动画持续的时间??
-            
-            
-            if (curTime >= easeDuration) { //到达了目的地的粒子原地等待下没到达的粒子
-                curTime =  easeDuration;
+            if (animTime > model.allTime) {  //如果当前计时的时间已经超出动画粒子的 (延迟时间 + 持续时间)那么就标记这个粒子已经到达了目的地
                 count += 1;
                 model.isEnd = true
             }
             
-            let curX = easeInOutQuad(time: curTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: easeDuration)
-            let curY = easeInOutQuad(time: curTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: easeDuration)
+            // 计算粒子路径
+            let curX = easeInOutQuad(time: currentTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: model.durationTime)
+            let curY = easeInOutQuad(time: currentTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: model.durationTime)
             
+            // 画粒子
             ctx.setFillColor(model.color.cgColor)
             ctx.fill(CGRect(x: curX, y: curY, width: 1, height: 1))
-            
-        }
-        
-        if (count == pixArray.count) {
-            reset()
         }
         
         runTimes += 1
@@ -182,10 +171,13 @@ class YXShapLayer: CALayer {
         let linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
         print("一次执行时间: \(linkTime * 1000.0) 毫秒")  //这个时间稳定在 70 毫秒内动画还是流畅的
         
+        if (count == pixArray.count) { // 画完了重置
+            reset()
+        }
     }
     
     
-    /// 缓动函数计算公式 这个我真的搞不懂
+    /// 缓动函数计算公式
     func easeInOutQuad(time: CGFloat, beginPosition: CGFloat, endPosition: CGFloat, duration: CGFloat) -> CGFloat {
         let coverDistance = endPosition - beginPosition
         var time = time
@@ -215,6 +207,7 @@ class YXShapLayer: CALayer {
             displayLink = nil
             animTime = 0
             count = 0
+            runTimes = 0
         }
     }
     
@@ -223,7 +216,5 @@ class YXShapLayer: CALayer {
         reset()  //重置
         createDisplayLink() //绘画
     }
-    
-    
-    
 }
+
