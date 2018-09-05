@@ -60,6 +60,11 @@
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
 		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
 		1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */; };
+		E14879C7213F742E002B014E /* DoorYinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C5213F742E002B014E /* DoorYinViewController.swift */; };
+		E14879C8213F742E002B014E /* DoorYinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14879C6213F742E002B014E /* DoorYinViewController.xib */; };
+		E14879CA213F9950002B014E /* DoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C9213F9950002B014E /* DoorView.swift */; };
+		E14879CD213FA193002B014E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14879CC213FA193002B014E /* AVFoundation.framework */; };
+		E14879D3213FC310002B014E /* 不仅仅是喜欢.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E14879D2213FC310002B014E /* 不仅仅是喜欢.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +123,11 @@
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
 		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintConfig.swift; sourceTree = "<group>"; };
+		E14879C5213F742E002B014E /* DoorYinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorYinViewController.swift; sourceTree = "<group>"; };
+		E14879C6213F742E002B014E /* DoorYinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorYinViewController.xib; sourceTree = "<group>"; };
+		E14879C9213F9950002B014E /* DoorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorView.swift; sourceTree = "<group>"; };
+		E14879CC213FA193002B014E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E14879D2213FC310002B014E /* 不仅仅是喜欢.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "不仅仅是喜欢.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14879CD213FA193002B014E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +228,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E14879BF213F718C002B014E /* DoorYinViewController */,
 				1C539F991FECEA1100C6027A /* EnergyViewController */,
 				1C5343261FE286E300CE7D3F /* WindowsXPViewController */,
 				1C53431E1FE266D400CE7D3F /* MotionViewController */,
@@ -277,6 +289,7 @@
 			children = (
 				1C76B5891FD4E6CF0094B768 /* Animations */,
 				1C76B5881FD4E6CF0094B768 /* Products */,
+				E14879CB213FA193002B014E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +389,25 @@
 			path = ButtonsViewController;
 			sourceTree = "<group>";
 		};
+		E14879BF213F718C002B014E /* DoorYinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E14879C5213F742E002B014E /* DoorYinViewController.swift */,
+				E14879C6213F742E002B014E /* DoorYinViewController.xib */,
+				E14879C9213F9950002B014E /* DoorView.swift */,
+				E14879D2213FC310002B014E /* 不仅仅是喜欢.mp3 */,
+			);
+			path = DoorYinViewController;
+			sourceTree = "<group>";
+		};
+		E14879CB213FA193002B014E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E14879CC213FA193002B014E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,9 +469,11 @@
 			files = (
 				1C39F9671FD78A0B00D00BC7 /* spark.png in Resources */,
 				1C76B5951FD4E6CF0094B768 /* LaunchScreen.storyboard in Resources */,
+				E14879D3213FC310002B014E /* 不仅仅是喜欢.mp3 in Resources */,
 				1C39F9661FD78A0B00D00BC7 /* rocket.png in Resources */,
 				1C39F9581FD6858100D00BC7 /* snow@2x.png in Resources */,
 				1C8076A11FE0FEF9005BAA47 /* nenolight.png in Resources */,
+				E14879C8213F742E002B014E /* DoorYinViewController.xib in Resources */,
 				1C39F94A1FD67AF500D00BC7 /* snow_2.png in Resources */,
 				1C39F9491FD67AF500D00BC7 /* snow_1.png in Resources */,
 				1C76B5921FD4E6CF0094B768 /* Assets.xcassets in Resources */,
@@ -468,6 +502,7 @@
 				1C5343281FE286EC00CE7D3F /* BubbleView.swift in Sources */,
 				1C9535FD2003081F00A48E67 /* UIButton+Extension.swift in Sources */,
 				1C539FA31FECEA3E00C6027A /* CountLabel.swift in Sources */,
+				E14879C7213F742E002B014E /* DoorYinViewController.swift in Sources */,
 				1C8076A21FE0FEF9005BAA47 /* NeonViewController.swift in Sources */,
 				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
@@ -493,6 +528,7 @@
 				1CC7490B1FF5F1B000F04461 /* Array+Extension.swift in Sources */,
 				1C76B5AA1FD523DF0094B768 /* HexagonViewController.swift in Sources */,
 				1C39F9401FD67A3300D00BC7 /* SnowViewController.swift in Sources */,
+				E14879CA213F9950002B014E /* DoorView.swift in Sources */,
 				1C5343211FE266E100CE7D3F /* PhysicalView.swift in Sources */,
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
 				1C9535FB2003072B00A48E67 /* UIBarButtonItem+Extension.swift in Sources */,
@@ -571,7 +607,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -622,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -640,7 +676,7 @@
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiyou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -658,7 +694,7 @@
 				INFOPLIST_FILE = Animations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiyou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuency;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

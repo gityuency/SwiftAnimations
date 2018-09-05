@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoorYinViewController" customModule="Animations" customModuleProvider="target">
+            <connections>
+                <outlet property="imageViewGreen" destination="gqg-ct-nx6" id="Hae-lR-EKc"/>
+                <outlet property="imageViewPurple" destination="3w3-W9-Q17" id="Ic5-Ze-5io"/>
+                <outlet property="imageViewRed" destination="gKt-BR-4x9" id="Xj4-oi-bbx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTo-vO-c91">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <color key="backgroundColor" red="0.96436992637060603" green="0.93639843739715989" blue="0.99767011404037476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="FF3-ME-quF"/>
+                    </constraints>
+                    <state key="normal" title="不仅仅是喜欢♂︎">
+                        <color key="titleColor" red="1" green="0.0" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="startDoor:" destination="-1" eventType="touchUpInside" id="B6b-Qa-cwE"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="douyin_red" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-BR-4x9">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="douyin_green" translatesAutoresizingMaskIntoConstraints="NO" id="gqg-ct-nx6">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="douyin_purple" translatesAutoresizingMaskIntoConstraints="NO" id="3w3-W9-Q17">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gKt-BR-4x9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IzE-9i-5V5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jTo-vO-c91" secondAttribute="trailing" id="JRE-Yj-EOv"/>
+                <constraint firstItem="gqg-ct-nx6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KiC-fh-48Z"/>
+                <constraint firstItem="3w3-W9-Q17" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L4J-VG-mcg"/>
+                <constraint firstItem="gKt-BR-4x9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cDq-Xq-EVt"/>
+                <constraint firstItem="jTo-vO-c91" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="dWP-FQ-Avk"/>
+                <constraint firstItem="3w3-W9-Q17" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eFF-R5-O88"/>
+                <constraint firstItem="gqg-ct-nx6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hAg-ew-Zyb"/>
+                <constraint firstItem="jTo-vO-c91" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hK1-CX-Kr3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="257" y="-58"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="douyin_green" width="300" height="300"/>
+        <image name="douyin_purple" width="300" height="300"/>
+        <image name="douyin_red" width="300" height="300"/>
+    </resources>
+</document>
