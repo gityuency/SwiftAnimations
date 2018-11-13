@@ -120,7 +120,7 @@ class YXShapLayer: CALayer {
     @objc func emitterAnim(displayLink: CADisplayLink) {
         setNeedsDisplay() //激活画图
         
-        animTime += 0.2 //用于控制粒子的下放速度
+        animTime += 0.1 //用于控制粒子的下放速度
     }
     
     

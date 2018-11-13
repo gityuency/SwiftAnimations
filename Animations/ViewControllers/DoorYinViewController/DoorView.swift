@@ -2,7 +2,7 @@
 //  DoorView.swift
 //  Animations
 //
-//  Created by ChinaRapidFinance on 2018/9/5.
+//  Created by yuency on 2018/9/5.
 //  Copyright © 2018年 yuency. All rights reserved.
 //
 
