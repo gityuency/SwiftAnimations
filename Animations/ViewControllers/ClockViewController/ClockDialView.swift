@@ -177,8 +177,8 @@ class ClockDialView: UIView {
         //创建动画
         let scaleShotAnimation = CABasicAnimation(keyPath: "position")
         scaleShotAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut) //动画效果
-        scaleShotAnimation.isRemovedOnCompletion = false  //防止动画结束回复状态
-        scaleShotAnimation.fillMode = kCAFillModeForwards; //防止动画结束回复状态
+        scaleShotAnimation.isRemovedOnCompletion = false   //防止动画结束回复状态  在动画结束的时候,是否移除动画
+        scaleShotAnimation.fillMode = kCAFillModeForwards; //防止动画结束回复状态  在动画结束的时候,保持动画的哪一个状态
         scaleShotAnimation.duration = 0.25  //动画时长
         
         for (i, layerScale) in arrayAllScales.enumerated() {
@@ -189,8 +189,8 @@ class ClockDialView: UIView {
              在创建指针的时候, 设置指针 layer 的 anchorPoint = CGPoint(x: 0.5, y: 1) 所以添加的第一个指针是指向 12点 方向的, 然后顺时针添加了其他的指针
              需要计算指针终点位置 距离圆心的值, 需要分别计算 x 和 y 值 首先需要知道每个指针的角度
              x y 偏移量计算:
-             1.从 12 点方向开始(第一个指针的位置), 这个位置的初始 角度是 (-CGFloat.pi / 2) , 相邻指针的角度是 360° / 12 也就是 (CGFloat.pi * 2 / 12)
-             2.然后是第几个指针,就把这个指针的 索引值 index * 相邻指针角度, 加上第一个指针的初始角度 就得到接下来每个指针的角度.
+             1.从 12 点方向开始(第一个指针的位置), 这个位置的初始 角度是 (-CGFloat.pi / 2) , 相邻指针的角度是 (360° / 12 = 30°) 也就是 (CGFloat.pi * 2 / 12)
+             2.然后是第几个指针,就把这个指针的 索引值 index * 相邻指针角度(30°), 加上第一个指针的初始角度 就得到接下来每个指针的角度.
              3.使用 (半径 * 三角函数 cos) 就可以计算 在 x 方向上的距离, 这个距离有正有负
              4.使用 (半径 * 三角函数 sin) 就可以计算 在 y 方向上的距离, 这个距离有正有负
              */

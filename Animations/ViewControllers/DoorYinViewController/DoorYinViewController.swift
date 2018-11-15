@@ -34,7 +34,7 @@ class DoorYinViewController: UIViewController {
         a.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn)
         a.fromValue = CGPoint(x: 0, y: 0)
         a.toValue = CGPoint(x: 0, y: 0)
-        a.autoreverses = true //自动反转
+        a.autoreverses = true //自动反转  动画怎么开始的就怎么回来
         a.duration = 0.1
         a.repeatCount = 1
         return a
