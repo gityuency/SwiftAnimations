@@ -96,9 +96,9 @@ class YXShapLayer: CALayer {
                     }
                     
                     let model = YXPixModel()
-                    model.pointX = XW + gao
-                    model.pointY = YH + kuan
-                    model.color = UIColor(red: R, green: G, blue: B, alpha: A);
+                    model.pointX = CGFloat(XW + gao)
+                    model.pointY = CGFloat(YH + kuan)
+                    model.cgColor = UIColor(red: R, green: G, blue: B, alpha: A).cgColor;
                     array.append(model)
                 }
             }
@@ -144,25 +144,25 @@ class YXShapLayer: CALayer {
             }
             
             if model.isEnd { //对于已经到达目的地的粒子, 就不需要计算了
-                ctx.setFillColor(model.color.cgColor)
-                ctx.fill(CGRect(x: CGFloat(model.pointX), y: CGFloat(model.pointY), width: 1, height: 1))
+                ctx.setFillColor(model.cgColor)
+                ctx.fill(CGRect(x: model.pointX, y: model.pointY, width: 1, height: 1))
                 continue;
             }
-            
-            //代码到达这里,表示,animTime 已经大于 model.delayTime, 这个时候粒子应该入场, 算出这个粒子入场的时间
-            let currentTime = animTime - model.delayTime
             
             if (animTime > model.allTime) {  //如果当前计时的时间已经超出动画粒子的 (延迟时间 + 持续时间)那么就标记这个粒子已经到达了目的地
                 count += 1;
                 model.isEnd = true
             }
+
+            //代码到达这里,表示,animTime 已经大于 model.delayTime, 这个时候粒子应该入场, 算出这个粒子入场的时间
+            let currentTime = animTime - model.delayTime
             
             // 计算粒子路径
-            let curX = easeInOutQuad(time: currentTime, beginPosition: beginPoint.x, endPosition: CGFloat(model.pointX), duration: model.durationTime)
-            let curY = easeInOutQuad(time: currentTime, beginPosition: beginPoint.y, endPosition: CGFloat(model.pointY), duration: model.durationTime)
+            let curX = easeInOutQuad(time: currentTime, beginPosition: beginPoint.x, endPosition: model.pointX, duration: model.durationTime)
+            let curY = easeInOutQuad(time: currentTime, beginPosition: beginPoint.y, endPosition: model.pointY, duration: model.durationTime)
             
             // 画粒子
-            ctx.setFillColor(model.color.cgColor)
+            ctx.setFillColor(model.cgColor)
             ctx.fill(CGRect(x: curX, y: curY, width: 1, height: 1))
         }
         

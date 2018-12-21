@@ -1,4 +1,5 @@
-###个人动画作品
+###  个人动画作品 
+
 
 部分原创
 部分临摹
@@ -6,8 +7,7 @@
 简书地址: https://www.jianshu.com/p/d0433d88771b
 
 
-
-###  第 1  集  -  代表作 
+###  第 1  集  -  代表作
 新安中学 Windows XP 屏保
 ![气泡.gif](http://upload-images.jianshu.io/upload_images/1235875-83cff2fdc29d36f2.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

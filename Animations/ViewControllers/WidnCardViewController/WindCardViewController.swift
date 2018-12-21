@@ -19,7 +19,7 @@ class WindCardViewController: YXViewController {
         let windView = YXAnimationImageView()
         windView.frame = view.bounds
         //CGRect(x: 20, y: 100, width: view.frame.width - 40, height: view.frame.height - 100 - 50)  //view.bounds
-        windView.image = UIImage.init(named: "bg_11")
+        windView.image = UIImage.init(named: "bg_1")
         view.addSubview(windView)
         
         // 动画

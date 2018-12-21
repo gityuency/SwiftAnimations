@@ -12,14 +12,14 @@ import UIKit
 /// 像素点模型
 class YXPixModel {
     
-    /// 每个像素的颜色
-    var color: UIColor = UIColor.brown
+    /// 每个像素的颜色 (为优化性能,免去 UIColor 和 CGColor 转换)
+    var cgColor: CGColor = UIColor.brown.cgColor
     
-    /// 像素的 X 坐标 (整型)
-    var pointX: Int = 0
+    /// 像素的 X 坐标
+    var pointX: CGFloat = 0
     
-    /// 像素的 Y 坐标 (整型)
-    var pointY: Int = 0
+    /// 像素的 Y 坐标
+    var pointY: CGFloat = 0
     
     /// 每个像素延迟时间
     var delayTime: CGFloat = 0
@@ -34,8 +34,13 @@ class YXPixModel {
     private(set) var allTime: CGFloat
     
     init() {
+        
         delayTime = CGFloat(arc4random_uniform(30))
-        durationTime = CGFloat(arc4random_uniform(20))
+        
+        //粒子的持续时间不能为0
+        let time = CGFloat(arc4random_uniform(20))
+        durationTime = time < 2 ? 2 : time
+        
         allTime = delayTime + durationTime
     }
     
