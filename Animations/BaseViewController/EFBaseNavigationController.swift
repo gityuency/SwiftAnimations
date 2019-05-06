@@ -22,7 +22,7 @@ class EFBaseNavigationController: UINavigationController {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         //如果不是栈底控制器才需要隐藏 根控制器不需要隐藏
-        if childViewControllers.count > 0 {
+        if children.count > 0 {
             //隐藏底部的 TabBar
             viewController.hidesBottomBarWhenPushed = true
             
@@ -32,8 +32,8 @@ class EFBaseNavigationController: UINavigationController {
                 var title = "返回"
                 
                 //判断控制器的级数,只有一个子控制器的时候,显示栈栈底控制的标题
-                if childViewControllers.count == 1 {
-                    title = childViewControllers.first?.title ?? "返回"
+                if children.count == 1 {
+                    title = children.first?.title ?? "返回"
                 }
                 
                 //取出自定义的 navItem

@@ -22,7 +22,7 @@ class DoorView: UIView {
     /// 动画
     private lazy var animation: CABasicAnimation = {  //定时器间隔和动画持续时间能影响动画流畅性
         let a = CABasicAnimation(keyPath: "position")
-        a.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn)
+        a.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeIn)
         a.fromValue = CGPoint(x: 0, y: 0)
         a.toValue = CGPoint(x: 0, y: 0)
         a.autoreverses = true //自动反转

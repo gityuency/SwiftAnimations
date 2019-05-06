@@ -35,9 +35,9 @@ class NeonViewController: YXViewController {
         let emitterLayer = CAEmitterLayer()
         emitterLayer.position = self.view.center// 粒子发射位置
         emitterLayer.emitterSize = CGSize(width: 2, height: 2)// 控制粒子大小
-        emitterLayer.renderMode = kCAEmitterLayerBackToFront  //渲染模式
-        emitterLayer.emitterMode = kCAEmitterLayerOutline// 控制发射源模式 即形状
-        emitterLayer.emitterShape = kCAEmitterLayerCircle //发射源形状
+        emitterLayer.renderMode = CAEmitterLayerRenderMode.backToFront  //渲染模式
+        emitterLayer.emitterMode = CAEmitterLayerEmitterMode.outline// 控制发射源模式 即形状
+        emitterLayer.emitterShape = CAEmitterLayerEmitterShape.circle //发射源形状
         emitterLayer.emitterCells = [emitterCell]
         
         

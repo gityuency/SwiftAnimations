@@ -227,7 +227,7 @@ fileprivate class BubbleImageView: UIImageView {
         contentsAnimation.fromValue = layer.contents;       //原始图片
         contentsAnimation.toValue = colorFullImage?.cgImage //切换后图片
         contentsAnimation.duration = duration;
-        contentsAnimation.fillMode = kCAFillModeForwards
+        contentsAnimation.fillMode = CAMediaTimingFillMode.forwards
         contentsAnimation.isRemovedOnCompletion = false
         layer.contents = colorFullImage?.cgImage  //动画结束后设置新的图片, 要不然会有突变的生硬的感觉
         layer.add(contentsAnimation, forKey: nil)

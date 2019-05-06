@@ -162,7 +162,7 @@ class LiuBianXingView: UIView {
             
             for line in self.lineArray {
                 let animation = CABasicAnimation(keyPath: "strokeEnd")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
                 animation.fromValue = 0
                 animation.toValue = 1
                 animation.duration = borderTime
@@ -180,7 +180,7 @@ class LiuBianXingView: UIView {
             
             for line in self.innerLineArray {
                 let animation = CABasicAnimation(keyPath: "strokeEnd")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
                 animation.fromValue = 0
                 animation.toValue = 1
                 animation.duration = innerLineTime
@@ -234,7 +234,7 @@ class LiuBianXingView: UIView {
             
             for line in self.lineArray {
                 let animation = CABasicAnimation(keyPath: "strokeEnd")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
                 animation.fromValue = 0
                 animation.toValue = 1
                 animation.duration = borderTime
@@ -253,7 +253,7 @@ class LiuBianXingView: UIView {
             
             for line in self.innerLineArray {
                 let animation = CABasicAnimation(keyPath: "strokeEnd")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
                 animation.fromValue = 0
                 animation.toValue = 1
                 animation.duration = innerLineTime
@@ -382,7 +382,7 @@ class LiuBianXingView: UIView {
         lineLayer.path            = path.cgPath;
         lineLayer.strokeColor     = UIColor.red.cgColor
         lineLayer.lineWidth       = 2;
-        lineLayer.lineCap = "round" //不写这句话,在线的交界处,就会出现断层
+        lineLayer.lineCap = convertToCAShapeLayerLineCap("round") //不写这句话,在线的交界处,就会出现断层
         lineLayer.strokeStart = 0 //一开始的时候线条不出来
         lineLayer.strokeEnd = 0
         
@@ -410,4 +410,9 @@ class LiuBianXingView: UIView {
         
         return lineLayer
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAShapeLayerLineCap(_ input: String) -> CAShapeLayerLineCap {
+	return CAShapeLayerLineCap(rawValue: input)
 }

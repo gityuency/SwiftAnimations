@@ -136,7 +136,7 @@ class EnergySphereView: UIView {
         let animaGroup = CAAnimationGroup()
         animaGroup.duration = 2
         animaGroup.animations = [animation, keyAnimation]
-        animation.fillMode = kCAFillModeBoth
+        animation.fillMode = CAMediaTimingFillMode.both
         lightCirlceLayer.add(animaGroup, forKey: nil)
         
         

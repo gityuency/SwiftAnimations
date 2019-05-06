@@ -95,7 +95,7 @@ class WaterRippleButton: UIButton {
         
         displaylink = CADisplayLink(target: self, selector: #selector(WaterRippleButton.updateWaterRipple))
         displaylink?.isPaused = true
-        displaylink?.add(to: RunLoop.current, forMode: .commonModes)
+        displaylink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
     }
     
     

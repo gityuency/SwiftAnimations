@@ -192,7 +192,7 @@ class YXShapLayer: CALayer {
     /// 创建定时器
     private func createDisplayLink() {
         displayLink = CADisplayLink(target: self, selector: #selector(emitterAnim(displayLink:)))
-        displayLink?.add(to: RunLoop.current, forMode: .commonModes)
+        displayLink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
     }
     
     /// 重置定时器

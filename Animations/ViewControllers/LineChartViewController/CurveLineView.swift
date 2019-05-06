@@ -219,7 +219,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
         for button in self.scrollViewArray {
             
             let animation = CABasicAnimation(keyPath: "position")
-            animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
             animation.fromValue = button.center
             animation.toValue = CGPoint(x: button.center.x, y: button.center.y - 30)
             
@@ -230,7 +230,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
             
             let animationGroup = CAAnimationGroup()
             animationGroup.duration = duration
-            animationGroup.fillMode = kCAFillModeBoth
+            animationGroup.fillMode = CAMediaTimingFillMode.both
             animationGroup.animations = [animation, alphaAni]
             button.layer.add(animationGroup, forKey: nil)
         }
@@ -239,7 +239,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
         for pointLayer in self.scorePointArray {
             
             let animation = CABasicAnimation(keyPath: "position")
-            animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
             animation.fromValue = pointLayer.position
             animation.toValue = CGPoint(x: pointLayer.position.x, y: self.scoreHeight / 2)
             
@@ -250,7 +250,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
             
             let animationGroup = CAAnimationGroup()
             animationGroup.duration = duration
-            animationGroup.fillMode = kCAFillModeBoth
+            animationGroup.fillMode = CAMediaTimingFillMode.both
             animationGroup.animations = [animation, alphaAni]
             pointLayer.add(animationGroup, forKey: nil)
         }
@@ -258,7 +258,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
         // 复位线条
         if lineShapLayer == nil { return }
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
         animation.fromValue = 1
         animation.toValue = 0
         animation.duration = duration
@@ -309,7 +309,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
             for pointLayer in self.scorePointArray {
                 //位置
                 let animation = CABasicAnimation(keyPath: "position")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeIn)
                 animation.fromValue = CGPoint(x: pointLayer.position.x, y: self.scoreHeight / 2)
                 animation.toValue = pointLayer.position
                 
@@ -321,7 +321,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
                 
                 let animationGroup = CAAnimationGroup()
                 animationGroup.duration = 0.25
-                animationGroup.fillMode = kCAFillModeBoth
+                animationGroup.fillMode = CAMediaTimingFillMode.both
                 animationGroup.animations = [animation, alphaAni]
                 pointLayer.add(animationGroup, forKey: nil)
             }
@@ -331,7 +331,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
         DispatchQueue.main.asyncAfter(deadline: delay + 0.25) {
             //进度
             let animation = CABasicAnimation(keyPath: "strokeEnd")
-            animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+            animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
             animation.fromValue = 0
             animation.toValue = 1
             animation.duration = 1
@@ -346,7 +346,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
             for button in self.scrollViewArray {
                 //位置
                 let animation = CABasicAnimation(keyPath: "position")
-                animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn)
+                animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeIn)
                 animation.fromValue = CGPoint(x: button.center.x, y: button.center.y + 20)
                 animation.toValue = button.center
                 animation.isRemovedOnCompletion = false
@@ -359,7 +359,7 @@ class CurveLineView: UIView, CAAnimationDelegate{
                 
                 let animationGroup = CAAnimationGroup()
                 animationGroup.duration = 0.5
-                animationGroup.fillMode = kCAFillModeBoth
+                animationGroup.fillMode = CAMediaTimingFillMode.both
                 animationGroup.animations = [animation, alphaAni]
                 button.layer.add(animationGroup, forKey: nil)
                 

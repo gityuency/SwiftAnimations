@@ -97,7 +97,7 @@ class DropModel: NSObject,  YXKeyFrameDelegate {
         animation.toValue = CGFloat.pi * 4
         animation.duration = 2
         animation.autoreverses = false;
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.repeatCount = 1
         return animation
     }()
@@ -107,7 +107,7 @@ class DropModel: NSObject,  YXKeyFrameDelegate {
         let animation = YXKeyframeAnimation(keyPath: "position");
         animation.setValue("D", forKey: "D")
         animation.duration = 4;
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.repeatCount = 1
         animation.autoreverses = false;
         animation.isRemovedOnCompletion = false
@@ -119,7 +119,7 @@ class DropModel: NSObject,  YXKeyFrameDelegate {
         let animation = YXKeyframeAnimation(keyPath: "position");
         animation.setValue("W", forKey: "W")
         animation.duration = 2;
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.repeatCount = 1
         animation.autoreverses = false;
         animation.isRemovedOnCompletion = false
@@ -131,7 +131,7 @@ class DropModel: NSObject,  YXKeyFrameDelegate {
         let animation = YXKeyframeAnimation(keyPath: "position");
         animation.setValue("R", forKey: "R")
         animation.duration = 0.1 * Double(arc4random_uniform(21)) + 2;
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.repeatCount = 1
         animation.autoreverses = false;
         animation.isRemovedOnCompletion = false

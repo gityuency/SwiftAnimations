@@ -54,7 +54,7 @@ class WindowsXPViewController: YXViewController {
                 contentsAnimation.fromValue = weakSelf.view.layer.contents;
                 contentsAnimation.toValue = imageArray[weakSelf.count]
                 contentsAnimation.duration = 2;
-                contentsAnimation.fillMode = kCAFillModeForwards
+                contentsAnimation.fillMode = CAMediaTimingFillMode.forwards
                 contentsAnimation.isRemovedOnCompletion = false
                 weakSelf.view.layer.contents = imageArray[weakSelf.count]
                 weakSelf.view.layer.add(contentsAnimation, forKey: nil)

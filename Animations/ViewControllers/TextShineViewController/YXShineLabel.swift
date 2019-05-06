@@ -95,7 +95,7 @@ class YXShineLabel: UILabel {
     func initialAttributedStringFromAttributedString(attributedString: NSAttributedString) -> NSMutableAttributedString {
         let mutableAttributedString = NSMutableAttributedString(attributedString: attributedString)
         let color = textColor.withAlphaComponent(0)
-        mutableAttributedString.addAttributes([NSAttributedStringKey.foregroundColor: color], range: NSMakeRange(0, mutableAttributedString.length))
+        mutableAttributedString.addAttributes([NSAttributedString.Key.foregroundColor: color], range: NSMakeRange(0, mutableAttributedString.length))
         return mutableAttributedString;
     }
     
@@ -114,7 +114,7 @@ class YXShineLabel: UILabel {
         textColor = UIColor.white
         displaylink = CADisplayLink(target: self, selector: #selector(YXShineLabel.updateAttributedString))
         displaylink?.isPaused = true
-        displaylink?.add(to: RunLoop.current, forMode: .commonModes)
+        displaylink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
     }
     
     /// 已经放到了窗口上
@@ -131,7 +131,7 @@ class YXShineLabel: UILabel {
         
         for i in 0..<attributedString.length {
             
-            attributedString.enumerateAttribute(NSAttributedStringKey.foregroundColor, in: NSMakeRange(i, 1), options: .longestEffectiveRangeNotRequired) { (color, range, stop) in
+            attributedString.enumerateAttribute(NSAttributedString.Key.foregroundColor, in: NSMakeRange(i, 1), options: .longestEffectiveRangeNotRequired) { (color, range, stop) in
                 
                 if let color = color as? UIColor {
                     
@@ -147,7 +147,7 @@ class YXShineLabel: UILabel {
                     
                     let shineColor = textColor.withAlphaComponent(CGFloat(percentage))
                     
-                    attributedString.addAttributes([NSAttributedStringKey.foregroundColor: shineColor], range: NSMakeRange(i, 1))
+                    attributedString.addAttributes([NSAttributedString.Key.foregroundColor: shineColor], range: NSMakeRange(i, 1))
                 }
             }
         }

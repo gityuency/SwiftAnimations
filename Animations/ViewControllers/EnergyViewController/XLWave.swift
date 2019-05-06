@@ -165,7 +165,7 @@ class XLWave: UIView {
         
         //以屏幕刷新速度为周期刷新曲线的位置
         disPlayLink = CADisplayLink(target: self, selector: #selector(updateWave(link:)))
-        disPlayLink?.add(to: RunLoop.main, forMode: .commonModes)
+        disPlayLink?.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
     }
     
     

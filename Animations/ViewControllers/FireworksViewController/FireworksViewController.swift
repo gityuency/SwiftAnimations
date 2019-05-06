@@ -32,10 +32,10 @@ class FireworksViewController: YXViewController {
         //发射源的大小
         fireworksEmitter.emitterSize    = CGSize(width: viewBounds.size.width / 2, height: 0)
         //发射模式
-        fireworksEmitter.emitterMode    = kCAEmitterLayerOutline;
+        fireworksEmitter.emitterMode    = CAEmitterLayerEmitterMode.outline;
         //发射形状
-        fireworksEmitter.emitterShape   = kCAEmitterLayerLine;
-        fireworksEmitter.renderMode     = kCAEmitterLayerAdditive;
+        fireworksEmitter.emitterShape   = CAEmitterLayerEmitterShape.line;
+        fireworksEmitter.renderMode     = CAEmitterLayerRenderMode.additive;
         fireworksEmitter.seed = UInt32(100)
         
         

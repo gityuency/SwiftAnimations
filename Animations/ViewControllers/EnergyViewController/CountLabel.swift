@@ -65,7 +65,7 @@ class CountLabel: UILabel {
         
         displaylink = CADisplayLink(target: self, selector: #selector(CountLabel.updateWaterRipple))
         displaylink?.isPaused = true
-        displaylink?.add(to: RunLoop.current, forMode: .commonModes)
+        displaylink?.add(to: RunLoop.current, forMode: RunLoop.Mode.common)
         
     }
     

@@ -30,8 +30,8 @@ extension UIBarButtonItem {
         
         if isBackButton {
             let imageName = "navigationbar_back_withtext"
-            btn.setImage(UIImage(named: imageName), for: UIControlState.normal)
-            btn.setImage(UIImage(named: imageName + "_highlighted"), for: UIControlState.highlighted)
+            btn.setImage(UIImage(named: imageName), for: UIControl.State.normal)
+            btn.setImage(UIImage(named: imageName + "_highlighted"), for: UIControl.State.highlighted)
             btn.sizeToFit() //重新调整一下大小
         }
         

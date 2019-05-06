@@ -39,8 +39,8 @@ class YXWindLayer: CALayer {
         c.setValue("e", forKey: "e")
         c.duration = 0.3
         c.isRemovedOnCompletion = false
-        c.fillMode = kCAFillModeForwards
-        c.type = "pageUnCurl" //CATransitionType(rawValue: "pageUnCurl")
+        c.fillMode = CAMediaTimingFillMode.forwards
+        c.type = convertToCATransitionType("pageUnCurl") //CATransitionType(rawValue: "pageUnCurl")
         return c
     }()
     /// 开始 倒翻页 动画
@@ -57,8 +57,8 @@ class YXWindLayer: CALayer {
         c.setValue("s", forKey: "s")
         c.duration = 0.2
         c.isRemovedOnCompletion = false
-        c.fillMode = kCAFillModeForwards
-        c.type = "pageCurl" //CATransitionType(rawValue: "pageCurl")
+        c.fillMode = CAMediaTimingFillMode.forwards
+        c.type = convertToCATransitionType("pageCurl") //CATransitionType(rawValue: "pageCurl")
         return c
     }()
     /// 开始 正翻页 动画 (单页)
@@ -75,8 +75,8 @@ class YXWindLayer: CALayer {
         c.setValue("o", forKey: "o")
         c.duration = 0.4
         c.isRemovedOnCompletion = false
-        c.fillMode = kCAFillModeForwards
-        c.type = "pageCurl" //CATransitionType(rawValue: "pageCurl")
+        c.fillMode = CAMediaTimingFillMode.forwards
+        c.type = convertToCATransitionType("pageCurl") //CATransitionType(rawValue: "pageCurl")
         return c
     }()
     /// 开始 当前页 被翻开 动画
@@ -170,3 +170,8 @@ extension YXWindLayer: YXTransitionDelegate {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCATransitionType(_ input: String) -> CATransitionType {
+	return CATransitionType(rawValue: input)
+}

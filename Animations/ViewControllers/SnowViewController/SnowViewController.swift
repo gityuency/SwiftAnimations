@@ -26,9 +26,9 @@ class SnowViewController: YXViewController {
         // 发射源的尺寸大小
         snowEmitter.emitterSize = view.bounds.size
         // 发射模式
-        snowEmitter.emitterMode = kCAEmitterLayerSurface
+        snowEmitter.emitterMode = CAEmitterLayerEmitterMode.surface
         // 发射源的形状
-        snowEmitter.emitterShape = kCAEmitterLayerLine
+        snowEmitter.emitterShape = CAEmitterLayerEmitterShape.line
         
         snowEmitter.shadowOpacity = 1.0;
         snowEmitter.shadowRadius  = 0.0;

@@ -13,7 +13,7 @@ extension Array where Element: Equatable {
     
     /// 删除第一个和指定元素相同的数组元素 Remove FIRST collection element that is equal to the given `object`:
     mutating func remove(object: Element) {
-        if let index = index(of: object) {
+        if let index = firstIndex(of: object) {
             remove(at: index)
         }
     }
@@ -21,7 +21,7 @@ extension Array where Element: Equatable {
     /// 删除所有和指定元素相同的数组元素 Remove ALL collection element that is equal to the given `object`:
     mutating func removeAllSame(object: Element) {
         for _ in 0..<self.count {
-            if let index = index(of: object) {
+            if let index = firstIndex(of: object) {
                 remove(at: index)
             }
         }

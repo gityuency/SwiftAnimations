@@ -176,9 +176,9 @@ class ClockDialView: UIView {
         
         //创建动画
         let scaleShotAnimation = CABasicAnimation(keyPath: "position")
-        scaleShotAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut) //动画效果
+        scaleShotAnimation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut) //动画效果
         scaleShotAnimation.isRemovedOnCompletion = false   //防止动画结束回复状态  在动画结束的时候,是否移除动画
-        scaleShotAnimation.fillMode = kCAFillModeForwards; //防止动画结束回复状态  在动画结束的时候,保持动画的哪一个状态
+        scaleShotAnimation.fillMode = CAMediaTimingFillMode.forwards; //防止动画结束回复状态  在动画结束的时候,保持动画的哪一个状态
         scaleShotAnimation.duration = 0.25  //动画时长
         
         for (i, layerScale) in arrayAllScales.enumerated() {
@@ -226,7 +226,7 @@ class ClockDialView: UIView {
         secondView.toCircleRadian = secondView.fromCircleRadian + secondCount;
         
         let pointerAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        pointerAnimation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseIn) //动画效果
+        pointerAnimation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeIn) //动画效果
         pointerAnimation.fromValue = 0  //动画起始值
         pointerAnimation.duration = 1  //动画时长
         

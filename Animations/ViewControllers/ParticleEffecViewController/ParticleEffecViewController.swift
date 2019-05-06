@@ -30,10 +30,10 @@ class ParticleEffecViewController: YXViewController {
         snowEmitter.emitterSize = view.bounds.size
 
         // 发射模式
-        snowEmitter.emitterMode = kCAEmitterLayerSurface
+        snowEmitter.emitterMode = CAEmitterLayerEmitterMode.surface
 
         // 发射源的形状
-        snowEmitter.emitterShape = kCAEmitterLayerLine
+        snowEmitter.emitterShape = CAEmitterLayerEmitterShape.line
 
 
         snowEmitter.shadowOpacity = 1.0;

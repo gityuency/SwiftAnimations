@@ -74,8 +74,8 @@ class LineChartViewController: YXViewController {
         self.title = "月考成绩"
         /// 更改导航栏文字的颜色和字体
         navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor:UIColor.red,
-             NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)
+            NSAttributedString.Key.foregroundColor:UIColor.red,
+             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20)
         ]
     }
     
