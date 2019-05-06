@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     
     //MARK: - 在这里添加控制器的名字和列表要显示的名字
     let listArray = [
+        ["DropDownViewController": "下降"],
         ["WindCardViewController": "被风吹过的夏天"],
         ["ClockViewController": "时钟 \"外滩的旧钟声变没变\""],
         ["DoorYinViewController":"抖音♂︎"],

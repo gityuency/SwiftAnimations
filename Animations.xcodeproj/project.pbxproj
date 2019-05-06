@@ -60,6 +60,8 @@
 		1CE31F651FDFD0FB004B8177 /* WaterRippleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */; };
 		1CE31F671FDFD21E004B8177 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */; };
 		1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */; };
+		A4C3A6A6227FCEF100A06726 /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C3A6A5227FCEF100A06726 /* DropDownViewController.swift */; };
+		A4C3A6A8227FCF1D00A06726 /* DropDownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C3A6A7227FCF1D00A06726 /* DropDownManager.swift */; };
 		E14879C7213F742E002B014E /* DoorYinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C5213F742E002B014E /* DoorYinViewController.swift */; };
 		E14879C8213F742E002B014E /* DoorYinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14879C6213F742E002B014E /* DoorYinViewController.xib */; };
 		E14879CA213F9950002B014E /* DoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C9213F9950002B014E /* DoorView.swift */; };
@@ -131,6 +133,8 @@
 		1CE31F641FDFD0FB004B8177 /* WaterRippleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRippleButton.swift; sourceTree = "<group>"; };
 		1CE31F661FDFD21E004B8177 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintConfig.swift; sourceTree = "<group>"; };
+		A4C3A6A5227FCEF100A06726 /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
+		A4C3A6A7227FCF1D00A06726 /* DropDownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownManager.swift; sourceTree = "<group>"; };
 		E14879C5213F742E002B014E /* DoorYinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorYinViewController.swift; sourceTree = "<group>"; };
 		E14879C6213F742E002B014E /* DoorYinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorYinViewController.xib; sourceTree = "<group>"; };
 		E14879C9213F9950002B014E /* DoorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorView.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A4C3A6A4227FCED800A06726 /* DropDownViewController */,
 				E1663B4E219D467D00D149E5 /* WidnCardViewController */,
 				E1CF3D182199803C00020679 /* ClockViewController */,
 				E14879BF213F718C002B014E /* DoorYinViewController */,
@@ -407,6 +412,15 @@
 			path = ButtonsViewController;
 			sourceTree = "<group>";
 		};
+		A4C3A6A4227FCED800A06726 /* DropDownViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C3A6A5227FCEF100A06726 /* DropDownViewController.swift */,
+				A4C3A6A7227FCF1D00A06726 /* DropDownManager.swift */,
+			);
+			path = DropDownViewController;
+			sourceTree = "<group>";
+		};
 		E14879BF213F718C002B014E /* DoorYinViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +564,7 @@
 				1C53432A1FE286FA00CE7D3F /* WindowsXPViewController.swift in Sources */,
 				E1663B5C219D5A9200D149E5 /* YXTransition.swift in Sources */,
 				1C76B58D1FD4E6CF0094B768 /* ViewController.swift in Sources */,
+				A4C3A6A6227FCEF100A06726 /* DropDownViewController.swift in Sources */,
 				E1CF3D1A2199805300020679 /* ClockViewController.swift in Sources */,
 				1C76B5A71FD4ED8A0094B768 /* CurveLineView.swift in Sources */,
 				E1663B5A219D49A200D149E5 /* YXAnimationImageView.swift in Sources */,
@@ -564,6 +579,7 @@
 				1C9535F8200306C800A48E67 /* EFBaseTabbarController.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
 				1C76B5AC1FD5240D0094B768 /* LiuBianXingView.swift in Sources */,
+				A4C3A6A8227FCF1D00A06726 /* DropDownManager.swift in Sources */,
 				1C9535F7200306C800A48E67 /* EFBaseNavigationController.swift in Sources */,
 				1CE31F631FDFD090004B8177 /* ButtonsViewController.swift in Sources */,
 				E1CF3D1C2199808800020679 /* UIView+Glow.swift in Sources */,
