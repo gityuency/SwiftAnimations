@@ -31,7 +31,7 @@ class WindowsXPViewController: YXViewController {
         self.title = "Windows XP"
 
         
-        var imageArray = [
+        let imageArray = [
             UIImage(named: "bg_1.jpg")?.cgImage,
             UIImage(named: "bg_2.jpg")?.cgImage,
             UIImage(named: "bg_3.jpg")?.cgImage,

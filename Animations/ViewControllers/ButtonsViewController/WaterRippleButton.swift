@@ -123,7 +123,7 @@ class WaterRippleButton: UIButton {
         
         let touchSet:NSSet=mevent.touches(for: button)! as NSSet
         
-        var touchArray:[AnyObject] = touchSet.allObjects as [AnyObject]
+        let touchArray:[AnyObject] = touchSet.allObjects as [AnyObject]
         
         let touch1:UITouch = touchArray[0] as! UITouch
         
