@@ -62,6 +62,8 @@
 		1CFBDAA51FE8B38C00D1C8D3 /* PrintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */; };
 		A4C3A6A6227FCEF100A06726 /* DropDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C3A6A5227FCEF100A06726 /* DropDownViewController.swift */; };
 		A4C3A6A8227FCF1D00A06726 /* DropDownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C3A6A7227FCF1D00A06726 /* DropDownManager.swift */; };
+		D6CC3AEE25246F7C00D26083 /* MovingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC3AED25246F7C00D26083 /* MovingView.swift */; };
+		D6CC3AF125246F9300D26083 /* MovingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC3AF025246F9300D26083 /* MovingViewController.swift */; };
 		E14879C7213F742E002B014E /* DoorYinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C5213F742E002B014E /* DoorYinViewController.swift */; };
 		E14879C8213F742E002B014E /* DoorYinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E14879C6213F742E002B014E /* DoorYinViewController.xib */; };
 		E14879CA213F9950002B014E /* DoorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14879C9213F9950002B014E /* DoorView.swift */; };
@@ -135,6 +137,8 @@
 		1CFBDAA41FE8B38C00D1C8D3 /* PrintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintConfig.swift; sourceTree = "<group>"; };
 		A4C3A6A5227FCEF100A06726 /* DropDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownViewController.swift; sourceTree = "<group>"; };
 		A4C3A6A7227FCF1D00A06726 /* DropDownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownManager.swift; sourceTree = "<group>"; };
+		D6CC3AED25246F7C00D26083 /* MovingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingView.swift; sourceTree = "<group>"; };
+		D6CC3AF025246F9300D26083 /* MovingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingViewController.swift; sourceTree = "<group>"; };
 		E14879C5213F742E002B014E /* DoorYinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorYinViewController.swift; sourceTree = "<group>"; };
 		E14879C6213F742E002B014E /* DoorYinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorYinViewController.xib; sourceTree = "<group>"; };
 		E14879C9213F9950002B014E /* DoorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorView.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		1C3D8C311FDA6E17000600D6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D69C26D425231C760046E741 /* FakeNoLimitScroll */,
 				A4C3A6A4227FCED800A06726 /* DropDownViewController */,
 				E1663B4E219D467D00D149E5 /* WidnCardViewController */,
 				E1CF3D182199803C00020679 /* ClockViewController */,
@@ -421,6 +426,15 @@
 			path = DropDownViewController;
 			sourceTree = "<group>";
 		};
+		D69C26D425231C760046E741 /* FakeNoLimitScroll */ = {
+			isa = PBXGroup;
+			children = (
+				D6CC3AF025246F9300D26083 /* MovingViewController.swift */,
+				D6CC3AED25246F7C00D26083 /* MovingView.swift */,
+			);
+			path = FakeNoLimitScroll;
+			sourceTree = "<group>";
+		};
 		E14879BF213F718C002B014E /* DoorYinViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +590,7 @@
 				1C3D8C261FD94B8C000600D6 /* YXPixModel.swift in Sources */,
 				1C0292081FD7EFF10064EF9E /* BBViewController.swift in Sources */,
 				1C539FA61FECEA5C00C6027A /* EnergyViewController.swift in Sources */,
+				D6CC3AEE25246F7C00D26083 /* MovingView.swift in Sources */,
 				1C9702011FE394440009A131 /* UIImage+Extension.swift in Sources */,
 				1C9535F8200306C800A48E67 /* EFBaseTabbarController.swift in Sources */,
 				1C76B58B1FD4E6CF0094B768 /* AppDelegate.swift in Sources */,
@@ -597,6 +612,7 @@
 				1C39F9601FD6883500D00BC7 /* FireworksViewController.swift in Sources */,
 				1C9535FB2003072B00A48E67 /* UIBarButtonItem+Extension.swift in Sources */,
 				1C539FA21FECEA3E00C6027A /* XLWave.swift in Sources */,
+				D6CC3AF125246F9300D26083 /* MovingViewController.swift in Sources */,
 				1C39F9691FD794A100D00BC7 /* YXViewController.swift in Sources */,
 				E1663B59219D49A200D149E5 /* YXWindLayer.swift in Sources */,
 			);
